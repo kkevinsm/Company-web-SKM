@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
+import aspectRatio from '@tailwindcss/aspect-ratio';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,8 +15,19 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            animation: {
+                'fill-progress': 'fill-progress 7s linear infinite',
+            },
+            keyframes: {
+                'fill-progress': {
+                    '0%': { width: '0%' },
+                    '100%': { width: '100%' },
+                }
+            },
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        forms, require('@tailwindcss/aspect-ratio'),
+    ],
 };
