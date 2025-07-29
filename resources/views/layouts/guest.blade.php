@@ -7,13 +7,11 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet" />        
-        {{-- Memuat CSS dan JS --}}
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        
-        {{-- Hapus div pembungkus yang tidak perlu agar tidak ada spasi putih di atas --}}
-            
+                    
         @include('components.navbar')
 
         <main>

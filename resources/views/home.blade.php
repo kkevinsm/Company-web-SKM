@@ -18,10 +18,10 @@
 
         <div class="container mx-auto px-6">
             <div class="relative z-20 text-white max-w-2.5xl">
-                <h1 class="text-5xl font-extrabold tracking-tight">  {{-- tracking-tight untuk letter-spacing: -0.02em --}}
+                <h1 class="text-5xl font-extrabold tracking-tight">
                     YOUR ALL METAL SHEET SOLUTION
                 </h1>
-                <p class="mt-4 text-2xl leading-normal text-white/75"> {{-- leading-normal untuk line-height & text-white/75 untuk warna --}}
+                <p class="mt-4 text-2xl leading-normal text-white/75">
                     PT SAFARI KARYA MAJU
                 </p>
 

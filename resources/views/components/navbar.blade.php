@@ -1,6 +1,6 @@
-<nav x-data="{ open: false }" class="text-white sticky top-0 z-50">
+<nav x-data="{ open: false }" class="text-white absolute top-0 w-full z-50">
     <div class="container mx-auto px-6">
-        <div class="flex items-center justify-between h-32"> {{-- Tinggi navbar 128px (h-32) --}}
+        <div class="flex items-center justify-between h-32">
 
             <div class="flex items-center gap-2">
                 <img class="w-12 h-12" src="{{ asset('images/LOGO SKM ONLY WHITE (1) 1.png') }}" alt="Safari Karya Maju Logo" />
