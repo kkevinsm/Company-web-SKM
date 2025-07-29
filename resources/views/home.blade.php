@@ -39,9 +39,39 @@
 
         </section>
 
-        <section class="relative bg-white py-16">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold">Section 2</h2>
+        <section class="bg-white py-8 md:py-12">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+
+                    <div class="w-full md:w-1/2 flex justify-center">
+                        <img src="{{ asset('images/logo-skm-color.png') }}" alt="Logo SKM Berwarna" class="w-full max-w-lg">
+                    </div>
+
+                    <div class="w-full md:w-1/2 text-left">
+                        <div class="flex flex-col gap-10">
+                            {{-- Grup Teks --}}
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-4xl font-bold text-gray-800">
+                                    Selamat Datang di PT Safari Karya Maju
+                                </h2>
+                                <p class="text-lg leading-relaxed text-gray-600 text-justify">
+                                    PT. Safari Karya Maju, kami menganggap integritas sebagai fondasi utama dalam setiap interaksi dengan pelanggan, mitra, dan stakeholder kami. Kami memegang teguh komitmen untuk selalu bertindak secara <strong>jujur, transparan, dan bertanggung jawab.</strong>
+                                </p>
+                            </div>
+
+                            {{-- Tombol --}}
+                            <div>
+                                <a href="#" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white hover:px-12 transition-all duration-300 ease-in-out">
+                                    <span>Selengkapnya</span>
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
