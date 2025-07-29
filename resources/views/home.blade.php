@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class="relative h-screen flex items-center justify-start overflow-hidden -mt-32">
+    <section class="relative h-screen flex items-center justify-start overflow-hidden">
         
         <div class="absolute top-0 left-0 w-full h-full z-0">
             <iframe 
