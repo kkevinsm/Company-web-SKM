@@ -143,7 +143,6 @@
                 >
                     <div x-ref="slider">
                         @php
-                            // 1. Perubahan: Mengganti 'youtube_id' menjadi 'video_file'
                             $cards = [
                                 ['title' => 'FIBER LASER', 'subtitle' => 'GLORYSTAR 1500W', 'image' => '1.png', 'video_file' => 'video1.mp4'],
                                 ['title' => 'FIBER LASER', 'subtitle' => 'KRRASS 6000W', 'image' => '2.png', 'video_file' => 'video2.mp4'],
@@ -160,7 +159,6 @@
                         @foreach ($cards as $card)
                             <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
                                 <div
-                                    {{-- 2. Perubahan: Menggunakan asset() untuk membuat URL video lokal --}}
                                     @click="showModal = true; videoUrl = '{{ asset('videos/' . $card['video_file']) }}'"
                                     class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
                                 >
@@ -194,7 +192,6 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
                             </button>
                             <div class="aspect-w-16 aspect-h-9">
-                                {{-- 3. Perubahan: Mengganti <iframe> dengan tag <video> --}}
                                 <video x-show="videoUrl" :src="videoUrl" controls autoplay class="w-full h-full">
                                     Browser Anda tidak mendukung tag video.
                                 </video>
