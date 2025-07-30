@@ -107,12 +107,12 @@
         </section>
 
         <!-- SECTION 4 -->
-<section class="bg-youngorange/30 py-16 sm:py-24 overflow-hidden">
+<section class="overflow-hidden">
     <div x-data="{
         services: [
             {
                 title: 'Laser Cutting',
-                description: 'Menggunakan mesin CNC Fiber Laser 1500 Watt, 6000 Watt, hingga 60kW untuk memastikan hasil potong yang presisi, tanpa barier dan rapi. Mampu mengerjakan segala jenis metal mulai dari plat besi hingga plat stainless (max 40 mm), plat alumunium (maks 5 mm), plat kuningan (5 mm), plat tembaga (2 mm), dengan waktu yang relatif cepat. Serta, pemotongan sudut hingga -45 sampai +45 derajat dengan area plat yang sangat luas hingga 12 x 3,5 m.',
+                description: 'Menggunakan mesin CNC Fiber Laser 1500 Watt, 6000 Watt, hingga 60kW untuk memastikan hasil potong yang presisi, tanpa barier dan rapi. Mampu mengerjakan segala jenis metal...',
                 image: '{{ asset('images/works/laser-cut.jpg') }}'
             },
             {
@@ -122,7 +122,7 @@
             },
             {
                 title: 'Metal Bending',
-                description: 'Dengan menggunakan mesin CNC Bending 160 ton berkapasitas panjang 3,2 meter, siap menghasilkan hasil tekukan yang presisi untuk material metal. Tersedia 4 pilihan V DIES: V8, V12, V16 dan V25 untuk pilihan radius tekuk yang diinginkan.',
+                description: 'Dengan menggunakan mesin CNC Bending 160 ton berkapasitas panjang 3,2 meter, siap menghasilkan hasil tekukan yang presisi untuk material metal. Tersedia 4 pilihan V DIES: V8, V12, V16 dan V25.',
                 image: '{{ asset('images/works/metal-bend.png') }}'
             },
             {
@@ -137,93 +137,98 @@
             }
         ],
         selectedIndex: 0,
-        interval: null,
+        direction: 1, // 1 for next, -1 for prev
+        get orderedServices() {
+            return [...this.services.slice(this.selectedIndex), ...this.services.slice(0, this.selectedIndex)];
+        },
         next() {
+            this.direction = 1;
             this.selectedIndex = (this.selectedIndex + 1) % this.services.length;
         },
         prev() {
+            this.direction = -1;
             this.selectedIndex = (this.selectedIndex - 1 + this.services.length) % this.services.length;
         },
-        select(index) {
-            this.selectedIndex = index;
-        },
-        scrollToSelected() {
-            this.$nextTick(() => {
-                const container = this.$refs.slider;
-                const card = this.$refs['card' + this.selectedIndex];
-                if (container && card) {
-                    container.scrollTo({
-                        left: card.offsetLeft,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+        select(service) {
+            const newIndex = this.services.findIndex(s => s.title === service.title);
+            this.direction = newIndex > this.selectedIndex ? 1 : -1;
+            this.selectedIndex = newIndex;
         }
     }"
-    x-init="() => {
-        interval = setInterval(() => next(), 5000);
-
-        $watch('selectedIndex', () => {
-            scrollToSelected();
-            clearInterval(interval);
-            interval = setInterval(() => next(), 5000);
-        });
-    }"
     class="w-full">
-        <h2 class="text-4xl sm:text-5xl font-semibold text-black mb-16 sm:mb-24 text-center lg:text-left px-6 sm:px-12 lg:px-24">Apa yang Kami Kerjakan</h2>
-
-        <div class="relative flex flex-col md:grid md:grid-cols-2 gap-6 items-center">
-            <!-- Image Section -->
-            <div class="relative w-full aspect-[4/3] md:h-[600px] overflow-hidden order-1">
-                <template x-for="(service, index) in services" :key="index">
-                    <div x-show="selectedIndex === index" 
-                         x-transition:enter="transition ease-in-out duration-500" 
-                         x-transition:enter-start="opacity-0" 
-                         x-transition:enter-end="opacity-100" 
-                         x-transition:leave="transition ease-in-out duration-300" 
-                         x-transition:leave-start="opacity-100" 
-                         x-transition:leave-end="opacity-0" 
-                         class="absolute inset-0">
-                        <img :src="service.image" :alt="service.title" class="w-full h-full object-cover object-center shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/720x620/cccccc/ffffff?text=Image+Not+Found';">
-                    </div>
-                </template>
+        <div class="bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl sm:text-5xl font-semibold text-black py-16 text-center lg:text-left px-4">Apa yang Kami Kerjakan</h2>
             </div>
-
-            <!-- Cards Section -->
-            <div class="w-full md:w-auto px-0 md:absolute md:left-[30%] lg:left-[40%] md:right-0 md:top-1/2 md:-translate-y-1/2 z-10 order-2 -mt-56 md:-mt-0 py-10 md:py-0">
-                <div x-ref="slider" class="flex overflow-x-auto gap-10 py-4 scroll-smooth no-scrollbar">
-                    <template x-for="(service, index) in services" :key="index">
-                        <div :x-ref="'card' + index" class="flex-shrink-0 w-[340px]">
-                            <div @click="select(index)" 
-                                 :class="{
-                                     '!bg-[#f96628] text-white': selectedIndex === index, 
-                                     'bg-white text-black': selectedIndex !== index,
-                                     'opacity-75 scale-90': selectedIndex !== index
-                                 }" 
-                                 class="card-content w-[340px] h-[420px] p-10 rounded-md shadow-lg gap-6 flex flex-col justify-between relative group transition-all duration-300 cursor-pointer">
-                                <h3 class="text-2xl font-bold group-hover:text-white" :class="{'text-white': selectedIndex === index}" x-text="service.title"></h3>
-                                <div class="flex-none w-10 h-1 rounded group-hover:bg-white" :class="{'bg-white': selectedIndex === index, 'bg-[#f96628]': selectedIndex !== index}"></div>
-                                <p class="text-sm group-hover:text-white flex-grow" :class="{'text-white': selectedIndex === index}" x-text="service.description"></p>
-                                </div>
+        </div>
+        <div class="bg-youngorange pt-24>
+             <div class="container mx-auto px-6">
+                <div class="relative flex flex-col md:grid md:grid-cols-2 gap-6 items-center">
+                    <!-- Image Section -->
+                    <div class="relative w-full aspect-[4/3] md:h-[600px] overflow-hidden order-1">
+                        <template x-for="(service, index) in services" :key="index">
+                            <div x-show="selectedIndex === index" 
+                                 x-transition:enter="transition ease-in-out duration-500" 
+                                 x-transition:enter-start="opacity-0" 
+                                 x-transition:enter-end="opacity-100" 
+                                 x-transition:leave="transition ease-in-out duration-300" 
+                                 x-transition:leave-start="opacity-100" 
+                                 x-transition:leave-end="opacity-0" 
+                                 class="absolute inset-0">
+                                <img :src="service.image" :alt="service.title" class="w-full h-full object-cover object-center shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/720x620/cccccc/ffffff?text=Image+Not+Found';">
                             </div>
+                        </template>
+                    </div>
+
+                    <!-- Cards Section -->
+                    <div class="w-full md:w-auto px-0 md:absolute md:left-[30%] lg:left-[40%] md:right-0 md:top-1/2 md:-translate-y-1/2 z-10 order-2 -mt-56 md:-mt-0 py-10 md:py-0">
+                        <div class="flex overflow-hidden gap-10 py-4">
+                            <template x-for="(service, index) in orderedServices" :key="service.title">
+                                <div class="flex-shrink-0 w-[340px]" 
+                                     x-show="index < 3" 
+                                     x-transition:enter="transition ease-in-out duration-500"
+                                     :x-transition:enter-start="direction === 1 ? 'opacity-0 transform translate-x-1/2' : 'opacity-0 transform -translate-x-1/2'"
+                                     x-transition:enter-end="opacity-100 transform translate-x-0"
+                                     x-transition:leave="transition ease-in-out duration-500"
+                                     x-transition:leave-start="opacity-100 transform translate-x-0"
+                                     :x-transition:leave-end="direction === 1 ? 'opacity-0 transform -translate-x-1/2' : 'opacity-0 transform translate-x-1/2'">
+                                    <div @click="select(service)" 
+                                         :class="{
+                                             '!bg-[#f96628] text-white': selectedIndex === services.indexOf(service), 
+                                             'bg-white text-black': selectedIndex !== services.indexOf(service),
+                                             'opacity-50 scale-90': selectedIndex !== services.indexOf(service) && index > 0
+                                         }" 
+                                         class="card-content w-[340px] h-[420px] p-10 rounded-md shadow-lg gap-6 flex flex-col justify-between relative group hover:!bg-[#f96628] transition-all duration-300 cursor-pointer">
+                                        <h3 class="text-2xl font-bold group-hover:text-white" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.title"></h3>
+                                        <div class="flex-none w-10 h-1 rounded group-hover:bg-white" :class="{'bg-white': selectedIndex === services.indexOf(service), 'bg-[#f96628]': selectedIndex !== services.indexOf(service)}"></div>
+                                        <p class="text-sm group-hover:text-white flex-grow" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.description"></p>
+                                        <div class="block mt-auto ml-auto">
+                                            <svg class="w-6 h-6 text-inherit group-hover:text-white" :class="{'text-white': selectedIndex === services.indexOf(service)}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
                         </div>
-                    </template>
-                </div>
-                 <!-- Navigation Buttons -->
-                <div class="flex justify-end gap-2 mt-4 items-center max-w-[620px] mx-auto">
-                    <button @click="prev()" class="group !static !w-12 !h-12 !m-0 flex items-center justify-center bg-white border border-slate-400 rounded-lg shadow hover:bg-[#f96628] transition-colors">
-                        <span class="sr-only">Prev</span>
-                        <svg class="w-6 h-6 text-slate-600 opacity-60 group-hover:text-white group-hover:opacity-100 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    <button @click="next()" class="group !static !w-12 !h-12 !m-0 flex items-center justify-center bg-white border border-slate-400 rounded-lg shadow hover:bg-[#f96628] transition-colors">
-                        <span class="sr-only">Next</span>
-                        <svg class="w-6 h-6 text-slate-600 opacity-60 group-hover:text-white group-hover:opacity-100 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                         <!-- Navigation Buttons -->
+                        <div class="flex justify-end gap-2 mt-4 items-center max-w-[620px] mx-auto">
+                            <button @click="prev()" class="group !static !w-12 !h-12 !m-0 flex items-center justify-center bg-white border border-slate-400 rounded-lg shadow hover:bg-[#f96628] transition-colors">
+                                <span class="sr-only">Prev</span>
+                                <svg class="w-6 h-6 text-slate-600 opacity-60 group-hover:text-white group-hover:opacity-100 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <button @click="next()" class="group !static !w-12 !h-12 !m-0 flex items-center justify-center bg-white border border-slate-400 rounded-lg shadow hover:bg-[#f96628] transition-colors">
+                                <span class="sr-only">Next</span>
+                                <svg class="w-6 h-6 text-slate-600 opacity-60 group-hover:text-white group-hover:opacity-100 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
         <!-- SECTION 5 -->
         <section class="bg-white py-20 md:py-28">
