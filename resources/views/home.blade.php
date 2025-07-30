@@ -119,7 +119,7 @@
                         title: 'Laser Welding',
                         description: 'Menggunakan mesin laser welding yang canggih, modern dan cepat untuk hasil sambungan yang rapi dan kuat. Menjadikan proses fabrikasi jauh lebih cepat dan hasil akhir produk yang bermutu tinggi.',
                         image: '{{ asset('images/works/laser-weld.png') }}'
-                    },
+                   },
                     {
                         title: 'Metal Bending',
                         description: 'Dengan menggunakan mesin CNC Bending 160 ton berkapasitas panjang 3,2 meter, siap menghasilkan hasil tekukan yang presisi untuk material metal. Tersedia 4 pilihan V DIES: V8, V12, V16 dan V25.',
@@ -162,19 +162,19 @@
                     </div>
                 </div>
                 <div class="bg-youngorange pt-24>
-                    <div class="container mx-auto px-6">
+                     <div class="container mx-auto px-6">
                         <div class="relative flex flex-col md:grid md:grid-cols-2 gap-6 items-center">
                             <!-- Image Section -->
                             <div class="relative w-full aspect-[4/3] md:h-[600px] overflow-hidden order-1">
                                 <template x-for="(service, index) in services" :key="index">
                                     <div x-show="selectedIndex === index" 
-                                        x-transition:enter="transition ease-in-out duration-500" 
-                                        x-transition:enter-start="opacity-0" 
-                                        x-transition:enter-end="opacity-100" 
-                                        x-transition:leave="transition ease-in-out duration-300" 
-                                        x-transition:leave-start="opacity-100" 
-                                        x-transition:leave-end="opacity-0" 
-                                        class="absolute inset-0">
+                                         x-transition:enter="transition ease-in-out duration-500" 
+                                         x-transition:enter-start="opacity-0" 
+                                         x-transition:enter-end="opacity-100" 
+                                         x-transition:leave="transition ease-in-out duration-300" 
+                                         x-transition:leave-start="opacity-100" 
+                                         x-transition:leave-end="opacity-0" 
+                                         class="absolute inset-0">
                                         <img :src="service.image" :alt="service.title" class="w-full h-full object-cover object-center shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/720x620/cccccc/ffffff?text=Image+Not+Found';">
                                     </div>
                                 </template>
@@ -185,20 +185,20 @@
                                 <div class="flex overflow-hidden gap-10 py-4">
                                     <template x-for="(service, index) in orderedServices" :key="service.title">
                                         <div class="flex-shrink-0 w-[340px]" 
-                                            x-show="index < 3" 
-                                            x-transition:enter="transition ease-in-out duration-500"
-                                            :x-transition:enter-start="direction === 1 ? 'opacity-0 transform translate-x-1/2' : 'opacity-0 transform -translate-x-1/2'"
-                                            x-transition:enter-end="opacity-100 transform translate-x-0"
-                                            x-transition:leave="transition ease-in-out duration-500"
-                                            x-transition:leave-start="opacity-100 transform translate-x-0"
-                                            :x-transition:leave-end="direction === 1 ? 'opacity-0 transform -translate-x-1/2' : 'opacity-0 transform translate-x-1/2'">
+                                             x-show="index < 3" 
+                                             x-transition:enter="transition ease-in-out duration-500"
+                                             :x-transition:enter-start="direction === 1 ? 'opacity-0 transform translate-x-1/2' : 'opacity-0 transform -translate-x-1/2'"
+                                             x-transition:enter-end="opacity-100 transform translate-x-0"
+                                             x-transition:leave="transition ease-in-out duration-500"
+                                             x-transition:leave-start="opacity-100 transform translate-x-0"
+                                             :x-transition:leave-end="direction === 1 ? 'opacity-0 transform -translate-x-1/2' : 'opacity-0 transform translate-x-1/2'">
                                             <div @click="select(service)" 
-                                                :class="{
-                                                    '!bg-[#f96628] text-white': selectedIndex === services.indexOf(service), 
-                                                    'bg-white text-black': selectedIndex !== services.indexOf(service),
-                                                    'opacity-50 scale-90': selectedIndex !== services.indexOf(service) && index > 0
-                                                }" 
-                                                class="card-content w-[340px] h-[420px] p-10 rounded-md shadow-lg gap-6 flex flex-col justify-between relative group hover:!bg-[#f96628] transition-all duration-300 cursor-pointer">
+                                                 :class="{
+                                                     '!bg-[#f96628] text-white': selectedIndex === services.indexOf(service), 
+                                                     'bg-white text-black': selectedIndex !== services.indexOf(service),
+                                                     'opacity-50 scale-90': selectedIndex !== services.indexOf(service) && index > 0
+                                                 }" 
+                                                 class="card-content w-[340px] h-[420px] p-10 rounded-md shadow-lg gap-6 flex flex-col justify-between relative group hover:!bg-[#f96628] transition-all duration-300 cursor-pointer">
                                                 <h3 class="text-2xl font-bold group-hover:text-white" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.title"></h3>
                                                 <div class="flex-none w-10 h-1 rounded group-hover:bg-white" :class="{'bg-white': selectedIndex === services.indexOf(service), 'bg-[#f96628]': selectedIndex !== services.indexOf(service)}"></div>
                                                 <p class="text-sm group-hover:text-white flex-grow" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.description"></p>
@@ -211,7 +211,7 @@
                                         </div>
                                     </template>
                                 </div>
-                                <!-- Navigation Buttons -->
+                                 <!-- Navigation Buttons -->
                                 <div class="flex justify-end gap-2 mt-4 items-center max-w-[620px] mx-auto">
                                     <button @click="prev()" class="group !static !w-12 !h-12 !m-0 flex items-center justify-center bg-white border border-slate-400 rounded-lg shadow hover:bg-[#f96628] transition-colors">
                                         <span class="sr-only">Prev</span>
@@ -228,7 +228,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- SECTION 5 -->
         <section class="bg-white py-20 md:py-28">

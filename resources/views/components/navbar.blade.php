@@ -10,7 +10,7 @@
             </div>
 
             <div class="hidden md:flex items-center space-x-12">
-                <a href="#" class="font-medium hover:text-blue-300 transition-colors">Beranda</a>
+                <a href="/" class="font-medium hover:text-blue-300 transition-colors">Beranda</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Produk Kami</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Pelanggan</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Sertifikasi</a>
@@ -19,10 +19,20 @@
             </div>
             
             <div class="md:hidden">
-                <button @click="open = !open" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path :class="{'hidden': open, 'inline-flex': !open }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        <path :class="{'hidden': !open, 'inline-flex': open }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                <button @click="open = !open" :aria-pressed="open"
+                    class="group inline-flex w-12 h-12 text-white items-center transition">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6 fill-current pointer-events-none" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect
+                            class="origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-x-0 group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[315deg]"
+                            y="7" width="9" height="2" rx="1"></rect>
+                        <rect
+                            class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-[[aria-pressed=true]]:rotate-45"
+                            y="7" width="16" height="2" rx="1"></rect>
+                        <rect
+                            class="origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[135deg]"
+                            y="7" width="9" height="2" rx="1"></rect>
                     </svg>
                 </button>
             </div>
@@ -30,12 +40,30 @@
         </div>
     </div>
 
-    <div x-show="open" class="md:hidden px-6 pb-4" @click.away="open = false">
-        <a href="#" class="block py-2 text-center font-medium hover:bg-gray-700 rounded">Beranda</a>
-        <a href="#" class="block py-2 text-center font-medium hover:bg-gray-700 rounded">Produk Kami</a>
-        <a href="#" class="block py-2 text-center font-medium hover:bg-gray-700 rounded">Pelanggan</a>
-        <a href="#" class="block py-2 text-center font-medium hover:bg-gray-700 rounded">Sertifikasi</a>
-        <a href="#" class="block py-2 text-center font-medium hover:bg-gray-700 rounded">Hubungi Kami</a>
-        <a href="#" class="block py-2 text-center font-medium hover:bg-gray-700 rounded">ID</a>
+    <!-- Mobile Menu -->
+    <div x-show="open" x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 transform -translate-y-2"
+        x-transition:enter-end="opacity-100 transform translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 transform translate-y-0"
+        x-transition:leave-end="opacity-0 transform -translate-y-2"
+        class="md:hidden absolute top-24 right-6 w-auto bg-white bg-opacity-95 shadow-lg rounded-lg"
+        @click.away="open = false">
+        <div class="px-4 py-2">
+            <a href="/"
+                class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Beranda</a>
+            <a href="#"
+                class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded whitespace-nowrap">Produk
+                Kami</a>
+            <a href="#"
+                class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Pelanggan</a>
+            <a href="#"
+                class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Sertifikasi</a>
+            <a href="#"
+                class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded whitespace-nowrap">Hubungi
+                Kami</a>
+            <a href="#"
+                class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">ID</a>
+        </div>
     </div>
 </nav>
