@@ -24,6 +24,9 @@ export default {
                     '100%': { width: '100%' },
                 }
             },
+            colors: {
+                youngorange: '#FFF0EA',
+            },
         },
     },
 
