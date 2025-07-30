@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 
-.no-scrollbar::-webkit-scrollbar {
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
     display: none;
-}
-.no-scrollbar {
+  }
+  .no-scrollbar {
     -ms-overflow-style: none;
-    scrollbar-width: none; 
+    scrollbar-width: none;
+  }
+
 }
