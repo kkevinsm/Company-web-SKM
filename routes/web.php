@@ -11,6 +11,10 @@ Route::get('/produk', function () {
     return view('produk');
 })->name('produk');
 
+Route::get('/sertifikasi', function () {
+    return view('sertifikasi');
+})->name('sertifikasi');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
