@@ -19,8 +19,8 @@
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
 
             <div class="container mx-auto px-6">
-                <div class="relative z-20 text-white max-w-3xl">
-                    <h1 class="text-5xl font-extrabold tracking-tight">
+                <div class="relative z-20 text-white max-w-4xl">
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
                         YOUR ALL METAL SHEET SOLUTION
                     </h1>
                     <p class="mt-4 text-2xl leading-normal text-white/75">
@@ -297,11 +297,11 @@
                                     <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                                         <div class="absolute inset-0 [backface-visibility:hidden]">
                                             <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
-                                                <img src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100">
+                                                <img src="{{ asset('images/technology/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100">
                                             </div>
                                         </div>
                                         <div class="absolute inset-0 h-full w-full rounded-2xl bg-black [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" />
+                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/technology/' . $card['image']) }}" alt="{{ $card['title'] }}" />
                                         </div>
                                     </div>
                                 </div>

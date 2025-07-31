@@ -3,29 +3,29 @@
 @section('content')
 
         <!-- HERO SECTION -->
-    <section class="relative h-[720px] flex items-center justify-start overflow-hidden">
-        
-        <div class="absolute top-0 left-0 w-full h-full z-0">
-            <img 
-                class="w-full h-full object-cover" 
-                src="{{ asset('images/hero-image-produk.png') }}" 
-                alt="Latar Belakang Halaman Produk">
-        </div>
-
-        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
-
-        <div class="container mx-auto px-6">
-            <div class="relative z-20 text-white max-w-4xl">
-                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
-                    Memastikan Kualitas Dan Keandalan Produk Kami Memenuhi Standar Sertifikasi Resmi
-                </h1>
-                <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
-                    Solusi Metal Sheeting Terbaik untuk Segala Kebutuhan Industri Anda.
-                </p>
+        <section class="relative h-[720px] flex items-center justify-start overflow-hidden">
+            
+            <div class="absolute top-0 left-0 w-full h-full z-0">
+                <img 
+                    class="w-full h-full object-cover" 
+                    src="{{ asset('images/hero-image-produk.png') }}" 
+                    alt="Latar Belakang Halaman Produk">
             </div>
-        </div>
 
-    </section>
+            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+
+            <div class="container mx-auto px-6">
+                <div class="relative z-20 text-white max-w-4xl">
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
+                        Memastikan Kualitas Dan Keandalan Produk Kami Memenuhi Standar Sertifikasi Resmi
+                    </h1>
+                    <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
+                        Solusi Metal Sheeting Terbaik untuk Segala Kebutuhan Industri Anda.
+                    </p>
+                </div>
+            </div>
+
+        </section>
 
         <!-- SECTION 2 -->
         <section class="bg-white py-20 md:py-28">
