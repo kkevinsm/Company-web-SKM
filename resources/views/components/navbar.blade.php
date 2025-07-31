@@ -12,7 +12,7 @@
             <div class="hidden md:flex items-center space-x-12">
                 <a href="/" class="font-medium hover:text-blue-300 transition-colors">Beranda</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Produk Kami</a>
-                <a href="#" class="font-medium hover:text-blue-300 transition-colors">Pelanggan</a>
+                <a href="{{ route('pelanggan') }}" class="font-medium hover:text-blue-300 transition-colors">Pelanggan</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Sertifikasi</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Hubungi Kami</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">ID</a>
