@@ -202,10 +202,6 @@
                                                 <h3 class="text-2xl font-bold group-hover:text-white" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.title"></h3>
                                                 <div class="flex-none w-10 h-1 rounded group-hover:bg-white" :class="{'bg-white': selectedIndex === services.indexOf(service), 'bg-[#f96628]': selectedIndex !== services.indexOf(service)}"></div>
                                                 <p class="text-sm group-hover:text-white flex-grow" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.description"></p>
-                                                <div class="block mt-auto ml-auto">
-                                                    <svg class="w-6 h-6 text-inherit group-hover:text-white" :class="{'text-white': selectedIndex === services.indexOf(service)}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-                                                    </svg>
                                                 </div>
                                             </div>
                                         </div>
