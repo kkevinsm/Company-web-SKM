@@ -2,10 +2,8 @@
 
 @section('content')
 
-    <div x-data="{ showModal: false, videoUrl: '' }">
-
         <!-- HERO SECTION -->
-        <section class="relative h-screen flex items-center justify-start overflow-hidden">
+        <section x-data="{ showModal: false, videoUrl: '' }" class="relative h-screen flex items-center justify-start overflow-hidden">
             
             <div class="absolute top-0 left-0 w-full h-full z-0">
                 <video 
@@ -21,7 +19,7 @@
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
 
             <div class="container mx-auto px-6">
-                <div class="relative z-20 text-white max-w-2.5xl">
+                <div class="relative z-20 text-white max-w-3xl">
                     <h1 class="text-5xl font-extrabold tracking-tight">
                         YOUR ALL METAL SHEET SOLUTION
                     </h1>
@@ -38,6 +36,17 @@
                 </div>
             </div>
 
+            {{-- MODAL UNTUK HERO SECTION - Diletakkan di dalam section-nya sendiri --}}
+            <div x-show="showModal" x-transition class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" style="display: none;">
+                <div class="relative bg-black p-2 rounded-lg shadow-lg w-full max-w-6xl" @click.away="showModal = false; videoUrl = ''">
+                    <button @click="showModal = false; videoUrl = ''" class="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full text-black flex items-center justify-center z-50">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe :src="videoUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- SECTION 2 -->

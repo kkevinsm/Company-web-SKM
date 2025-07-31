@@ -2,43 +2,30 @@
 
 @section('content')
 
-    <div x-data="{ showModal: false, videoUrl: '' }">
-
         <!-- HERO SECTION -->
-        <section class="relative h-screen flex items-center justify-start overflow-hidden">
-            
-            <div class="absolute top-0 left-0 w-full h-full z-0">
-                <video 
-                    class="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2" 
-                    src="{{ asset('images/teaser-web-skm.mp4') }}" 
-                    autoplay 
-                    loop 
-                    muted 
-                    playsinline>
-                </video>
+    <section class="relative h-[720px] flex items-center justify-start overflow-hidden">
+        
+        <div class="absolute top-0 left-0 w-full h-full z-0">
+            <img 
+                class="w-full h-full object-cover" 
+                src="{{ asset('images/hero-image-produk.png') }}" 
+                alt="Latar Belakang Halaman Produk">
+        </div>
+
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+
+        <div class="container mx-auto px-6">
+            <div class="relative z-20 text-white max-w-4xl">
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
+                    Memastikan Kualitas Dan Keandalan Produk Kami Memenuhi Standar Sertifikasi Resmi
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
+                    Solusi Metal Sheeting Terbaik untuk Segala Kebutuhan Industri Anda.
+                </p>
             </div>
+        </div>
 
-            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
-
-            <div class="container mx-auto px-6">
-                <div class="relative z-20 text-white max-w-2.5xl">
-                    <h1 class="text-5xl font-extrabold tracking-tight">
-                        YOUR ALL METAL SHEET SOLUTION
-                    </h1>
-                    <p class="mt-4 text-2xl leading-normal text-white/75">
-                        PT SAFARI KARYA MAJU
-                    </p>
-
-                    <button @click="showModal = true; videoUrl = 'https://www.youtube.com/embed/WT_AxXaOWrs?autoplay=1&mute=1&loop=1&playlist=WT_AxXaOWrs&controls=05'" class="mt-8 inline-flex items-center justify-center gap-2 h-12 py-5 px-8 border-2 border-white rounded-full text-white text-sm shadow-sm hover:px-12 hover:bg-white hover:text-gray-900 transition-all duration-300 ease-in-out">
-                        <span class="leading-normal">Putar Video</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.ww3.org/2000/svg">
-                            <path d="M8 5v14l11-7z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-        </section>
+    </section>
 
         <!-- SECTION 2 -->
         <section class="bg-white py-20 md:py-28">
