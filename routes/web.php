@@ -22,6 +22,7 @@ Route::get('/welcome', function () {
 Route::get('/tentang', function () {
     return view('home.tentang');
 })->name('tentang');
+
 Route::get('/pelanggan', function () {
     return view('pelanggan');
 })->name('pelanggan');

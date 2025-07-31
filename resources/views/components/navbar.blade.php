@@ -11,9 +11,9 @@
 
             <div class="hidden md:flex items-center space-x-12">
                 <a href="/" class="font-medium hover:text-blue-300 transition-colors">Beranda</a>
-                <a href="#" class="font-medium hover:text-blue-300 transition-colors">Produk Kami</a>
+                <a href="{{ route('produk') }}" class="font-medium hover:text-blue-300 transition-colors">Produk Kami</a>
                 <a href="{{ route('pelanggan') }}" class="font-medium hover:text-blue-300 transition-colors">Pelanggan</a>
-                <a href="#" class="font-medium hover:text-blue-300 transition-colors">Sertifikasi</a>
+                <a href="{{ route('sertifikasi') }}" class="font-medium hover:text-blue-300 transition-colors">Sertifikasi</a>
                 <a href="{{ route('hubungi-kami') }}" class="font-medium hover:text-blue-300 transition-colors">Hubungi Kami</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">ID</a>
             </div>
@@ -52,17 +52,17 @@
         <div class="px-4 py-2">
             <a href="/"
                 class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Beranda</a>
-            <a href="#"
+            <a href="{{ route('produk') }}"
                 class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded whitespace-nowrap">Produk
                 Kami</a>
-            <a href="#"
+            <a href="{{ route('pelanggan') }}"
                 class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Pelanggan</a>
-            <a href="#"
+            <a href="{{ route('sertifikasi') }}"
                 class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Sertifikasi</a>
-            <a href="#"
+            <a href="{{ route('hubungi-kami') }}"
                 class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded whitespace-nowrap">Hubungi
                 Kami</a>
-            <a href="#"
+            <a href=""
                 class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">ID</a>
         </div>
     </div>
