@@ -301,7 +301,7 @@
                                             </div>
                                         </div>
                                         <div class="absolute inset-0 h-full w-full rounded-2xl bg-black [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/technology/' . $card['image']) }}" alt="{{ $card['title'] }}" />
+                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/reverse-tech/' . $card['image']) }}" alt="{{ $card['title'] }}" />
                                         </div>
                                     </div>
                                 </div>
