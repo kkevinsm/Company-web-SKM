@@ -29,25 +29,34 @@
         <!-- SECTION 2 -->
         <section class="bg-white text-black py-20 md:py-28">
             <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-left">
-                        Sekilas PT Safari Karya Maju
-                    </h2>
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    
+                    <!-- Kolom Kiri: Gambar -->
+                    <div class="w-full md:w-2/5 flex-shrink-0">
+                        <img src="{{ asset('images/Mask-group.png') }}" alt="Sekilas tentang PT Safari Karya Maju" class="w-full h-auto">
+                    </div>
 
-                    <div class="space-y-6 text-lg text-gray-700 text-justify">
-                        <p>
-                            <strong>PT SAFARI KARYA MAJU</strong> merupakan perusahaan yang berdiri secara resmi pada awal tahun 2000 dengan nama <strong> CV SAFARI KARYA MAJU</strong>, berdomisili di Pandaan, Jawa Timur.
-                        </p>
-                        <p>
-                            PT SAFARI KARYA MAJU merupakan perusahaan yang bergerak dibidang <strong> sheet cutting dan fabrication. </strong>
-                        </p>
-                        <p>
-                            PT SAFARI KARYA MAJU memiliki pengalaman yang mumpuni dan kompeten dibidangnya karena didukung oleh <strong> mesin produksi yang modern dan handal serta dioperasikan oleh tenaga kerja yang
-                            profesional dan berpengalaman,</strong> sehingga mampu memberikan pelayanan terbaik untuk menjamin kepuasan klien kami. 
-                        </p>
-                        <p>
-                            PT SAFARI KARYA MAJU menjalankan bisnisnya dengan professional dan didukung oleh kemampuan manajerial yang handal. Seiring berkembangnya zaman, dan sesuai visi dan misi perusahaan, maka kami akan terus menerus melakukan <strong> inovasi dan perubahan </strong> demi menjadi perusahaan yang lebih handal sehingga <strong> mampu bersaing secara nasional atau internasional. </strong>
-                        </p>
+                    <!-- Kolom Kanan: Teks -->
+                    <div class="w-full md:w-3/5">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-left">
+                            Sekilas PT Safari Karya Maju
+                        </h2>
+
+                        <div class="space-y-6 text-lg text-gray-700 text-justify">
+                            <p>
+                                <strong>PT SAFARI KARYA MAJU</strong> merupakan perusahaan yang berdiri secara resmi pada awal tahun 2000 dengan nama <strong> CV SAFARI KARYA MAJU</strong>, berdomisili di Pandaan, Jawa Timur.
+                            </p>
+                            <p>
+                                PT SAFARI KARYA MAJU merupakan perusahaan yang bergerak dibidang <strong> sheet cutting dan fabrication. </strong>
+                            </p>
+                            <p>
+                                PT SAFARI KARYA MAJU memiliki pengalaman yang mumpuni dan kompeten dibidangnya karena didukung oleh <strong> mesin produksi yang modern dan handal serta dioperasikan oleh tenaga kerja yang
+                                profesional dan berpengalaman,</strong> sehingga mampu memberikan pelayanan terbaik untuk menjamin kepuasan klien kami. 
+                            </p>
+                            <p>
+                                PT SAFARI KARYA MAJU menjalankan bisnisnya dengan professional dan didukung oleh kemampuan manajerial yang handal. Seiring berkembangnya zaman, dan sesuai visi dan misi perusahaan, maka kami akan terus menerus melakukan <strong> inovasi dan perubahan </strong> demi menjadi perusahaan yang lebih handal sehingga <strong> mampu bersaing secara nasional atau internasional. </strong>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
