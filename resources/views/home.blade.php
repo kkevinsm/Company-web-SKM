@@ -334,6 +334,37 @@
             </div>
         </section>
 
+        <!-- SECTION 6 -->
+        <section class="bg-[#f96628] py-20 md:py-12">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Kolom Kiri: Teks -->
+                    <div class="md:w-1/2 text-white text-center md:text-left">
+                        <h2 class="text-4xl md:text-5xl font-bold">Reels Untuk Anda</h2>
+                        <p class="mt-4 text-base leading-relaxed max-w-xl mx-auto md:mx-0">
+                            Lihat lebih dekat PT Safari Karya Maju. Melalui konten Instagram, kami berbagi wawasan industri, cuplikan di balik layar, dan inovasi terbaru kami secara dinamis. Ikuti kami di media sosial untuk tetap terhubung dan mendapatkan semua update berharga dari kami.
+                        </p>
+                        <a href="https://www.instagram.com/skm_lasercutting/" target="_blank" class="mt-8 inline-flex items-center gap-2 px-6 py-3 border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
+                            <span>Instagram Kami</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
+                        </a>
+                    </div>
+                    <!-- Kolom Kanan: Mockup Mobile -->
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+                            <div class="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                            <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                            <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white">
+                                <iframe src="https://www.instagram.com/reel/DK-8bYBzG2q/?igsh=dGQ4Mmhoc3RlZmQ2/embed" class="w-full h-full" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div 
             x-show="showModal" 
             x-transition:enter="transition ease-out duration-300"
