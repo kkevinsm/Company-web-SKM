@@ -9,3 +9,16 @@
     -ms-overflow-style: none;
     scrollbar-width: none; 
 }
+
+.clipped-corner {
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.clipped-corner-top-left {
+    clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%, 0 100px);
+}
+
+.clipped-corner-top-right-nilai-only {
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
+}
+

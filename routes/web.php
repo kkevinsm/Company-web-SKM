@@ -15,6 +15,14 @@ Route::get('/sertifikasi', function () {
     return view('sertifikasi');
 })->name('sertifikasi');
 
+Route::get('/welcome', function () {
+    return view('home.welcome');
+})->name('welcome');
+
+Route::get('/tentang', function () {
+    return view('home.tentang');
+})->name('tentang');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

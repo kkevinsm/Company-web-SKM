@@ -70,7 +70,7 @@
                             </div>
 
                             <div>
-                                <a href="#" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white hover:px-12 transition-all duration-300 ease-in-out">
+                                <a href="{{ route('welcome') }}" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white hover:px-12 transition-all duration-300 ease-in-out">
                                     <span>Selengkapnya</span>
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
@@ -102,7 +102,7 @@
                         </p>
 
                         <div>
-                            <a href="#" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-6 border border-white rounded-full text-white text-sm font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
+                            <a href="{{ route('tentang') }}" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-6 border border-white rounded-full text-white text-sm font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
                                 <span>Selengkapnya</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
