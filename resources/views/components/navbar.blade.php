@@ -14,7 +14,7 @@
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Produk Kami</a>
                 <a href="{{ route('pelanggan') }}" class="font-medium hover:text-blue-300 transition-colors">Pelanggan</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">Sertifikasi</a>
-                <a href="#" class="font-medium hover:text-blue-300 transition-colors">Hubungi Kami</a>
+                <a href="{{ route('hubungi-kami') }}" class="font-medium hover:text-blue-300 transition-colors">Hubungi Kami</a>
                 <a href="#" class="font-medium hover:text-blue-300 transition-colors">ID</a>
             </div>
             

@@ -11,6 +11,10 @@ Route::get('/pelanggan', function () {
     return view('pelanggan');
 })->name('pelanggan');
 
+Route::get('/hubungi-kami', function () {
+    return view('hubungi-kami');
+})->name('hubungi-kami');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
