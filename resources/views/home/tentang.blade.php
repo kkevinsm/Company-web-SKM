@@ -31,12 +31,10 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
                     
-                    <!-- Kolom Kiri: Gambar -->
                     <div class="w-full md:w-2/5 flex-shrink-0">
                         <img src="{{ asset('images/Mask-group.png') }}" alt="Sekilas tentang PT Safari Karya Maju" class="w-full h-auto">
                     </div>
 
-                    <!-- Kolom Kanan: Teks -->
                     <div class="w-full md:w-3/5">
                         <h2 class="text-3xl font-bold text-gray-800 mb-6 text-left">
                             Sekilas PT Safari Karya Maju
