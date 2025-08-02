@@ -17,10 +17,10 @@
             <div class="container mx-auto px-6">
                 <div class="relative z-20 text-white max-w-4xl">
                     <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
-                        Memastikan Kualitas Dan Keandalan Produk Kami Memenuhi Standar Sertifikasi Resmi
+                        {{ __('produk.hero_title') }}
                     </h1>
                     <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
-                        Solusi Metal Sheeting Terbaik untuk Segala Kebutuhan Industri Anda.
+                        {{ __('produk.hero_subtitle') }}
                     </p>
                 </div>
             </div>
@@ -31,9 +31,9 @@
         <section class="bg-white py-20 md:py-28">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 md:w-1/2">Produk Kami</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 md:w-1/2">{{ __('produk.section_1_title') }}</h2>
                     <p class="text-base text-gray-600 md:w-1/2 mt-4 md:mt-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque ex in odio aliquet, pharetra tincidunt turpis eleifend. Suspendisse vitae mollis dui.
+                        {{ __('produk.section_1_description') }}
                     </p>
                 </div>
 

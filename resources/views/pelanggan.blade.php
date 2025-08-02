@@ -12,7 +12,7 @@
         <div class="container mx-auto px-6">
             <div class="relative z-20 text-white max-w-4xl">
                 <h1 class="text-5xl font-extrabold tracking-tight">
-                    Tingkatkan Kepercayaan Dengan Menyediakan Baja Yang AMAN Dan HANDAL
+                    {{ __('pelanggan.title') }}
                 </h1>
                 <p class="mt-4 text-2xl leading-normal text-white/75">
                     PT SAFARI KARYA MAJU
@@ -28,12 +28,12 @@
         
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
                 <div class="md:w-1/2">
-                    <h3 class="text-lg font-semibold text-[#f96628] uppercase tracking-wider">OVERVIEW PELANGGAN</h3>
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2">Bersama Terus Mendukung Kemajuan Industri Bangsa Kita</h2>
+                    <h3 class="text-lg font-semibold text-[#f96628] uppercase tracking-wider">{{ __('pelanggan.section_title') }}</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2">{{ __('pelanggan.section_subtitle') }}</h2>
                 </div>
                 <div class="md:w-1/2 mt-4 md:mt-0">
                     <p class="text-base text-gray-600 text-justify">
-                        Semua produk pabrik baja PT Safari Karya Maju diuji dengan aman dan dapat diandalkan, dengan keahlian selama 25 tahun kami bangga menjadi mitra bagi banyak proyek di negeri ini. Berikut daftar perusahaan yang telah mempercayakan pabrik kami yang berkualitas, salah satunya perusahaan multinasional.
+                        {{__('pelanggan.section_description')}}
                     </p>
                 </div>
             </div>
