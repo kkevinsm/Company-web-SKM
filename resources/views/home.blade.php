@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <div class="bg-youngorange pt-24>
-                     <div class="container mx-auto px-6">
+                     <div class="container mx-auto">
                         <div class="relative flex flex-col md:grid md:grid-cols-2 gap-6 items-center">
                             <!-- Image Section -->
                             <div class="relative w-full aspect-[4/3] md:h-[600px] overflow-hidden order-1">
@@ -191,7 +191,7 @@
 
                             <!-- Cards Section -->
                             <div class="w-full md:w-auto px-0 md:absolute md:left-[30%] lg:left-[40%] md:right-0 md:top-1/2 md:-translate-y-1/2 z-10 order-2 -mt-56 md:-mt-0 py-10 md:py-0">
-                                <div class="flex overflow-hidden gap-10 py-4">
+                                <div class="flex overflow-hidden gap-10 py-4 pl-[calc(50%-170px)] md:pl-0">
                                     <template x-for="(service, index) in orderedServices" :key="service.title">
                                         <div class="flex-shrink-0 w-[340px]" 
                                              x-show="index < 3" 
@@ -217,7 +217,7 @@
                                     </template>
                                 </div>
                                  <!-- Navigation Buttons -->
-                                <div class="flex justify-end gap-2 mt-4 items-center max-w-[620px] mx-auto">
+                                <div class="flex justify-center md:justify-end gap-2 mt-4 items-center max-w-[620px] mx-auto">
                                     <button @click="prev()" class="group !static !w-12 !h-12 !m-0 flex items-center justify-center bg-white border border-slate-400 rounded-lg shadow hover:bg-[#f96628] transition-colors">
                                         <span class="sr-only">Prev</span>
                                         <svg class="w-6 h-6 text-slate-600 opacity-60 group-hover:text-white group-hover:opacity-100 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
