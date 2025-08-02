@@ -31,7 +31,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                         <div class="md:col-span-2 space-y-4">
                             <h2 class="text-4xl font-bold text-gray-900">Workshop Safari Karya Maju</h2>
-                            <a href="https://maps.app.goo.gl/oHs6VHPeXhuDN3nM8" target="_blank" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white transition-colors duration-300">
+                            <a href="https://maps.app.goo.gl/oHs6VHPeXhuDN3nM8" target="_blank" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white hover:px-12 transition-all duration-300">
                                 <span>Dapatkan Arah</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                             </a>
@@ -67,52 +67,14 @@
                 <p class="text-lg text-white/80 leading-relaxed">
                     Kami siap membantu mewujudkan proyek Anda dengan standar kualitas tertinggi. Diskusikan kebutuhan Anda dengan tim ahli kami sekarang juga.
                 </p>
-                <button @click="showModal = true" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-white rounded-full text-white text-base font-bold hover:bg-white hover:text-black transition-colors duration-300">
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-white rounded-full text-white text-base font-bold hover:bg-white hover:text-black hover:px-12 transition-all duration-300">
                     <span>Hubungi Kami</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
-
-    <!-- MODAL FORMULIR -->
-    <div x-show="showModal" x-transition.opacity.duration.300 class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4" style="display: none;">
-        <div x-show="showModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" @click.away="showModal = false" class="relative bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl shadow-xl w-full max-w-2xl text-white">
-            
-            <button @click="showModal = false" class="absolute -top-3 -right-3 w-10 h-10 bg-white/30 hover:bg-white/50 rounded-full text-white shadow-lg flex items-center justify-center transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            
-            <div class="p-8 md:p-12">
-                <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
-                <form action="#" method="POST" class="space-y-6">
-                    @csrf
-                    <div class="relative">
-                        <label for="name" class="block text-sm font-medium text-white/80 mb-1">Nama Lengkap</label>
-                        <input type="text" name="name" id="name" required class="mt-1 block w-full bg-white/10 border-white/30 rounded-md shadow-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm transition-all duration-300">
-                    </div>
-                    <div class="relative">
-                        <label for="email" class="block text-sm font-medium text-white/80 mb-1">Alamat Email</label>
-                        <input type="email" name="email" id="email" required class="mt-1 block w-full bg-white/10 border-white/30 rounded-md shadow-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm transition-all duration-300">
-                    </div>
-                    <div class="relative">
-                        <label for="subject" class="block text-sm font-medium text-white/80 mb-1">Subjek</label>
-                        <input type="text" name="subject" id="subject" required class="mt-1 block w-full bg-white/10 border-white/30 rounded-md shadow-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm transition-all duration-300">
-                    </div>
-                    <div class="relative">
-                        <label for="message" class="block text-sm font-medium text-white/80 mb-1">Pesan Anda</label>
-                        <textarea name="message" id="message" rows="4" required class="mt-1 block w-full bg-white/10 border-white/30 rounded-md shadow-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm transition-all duration-300"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 h-12 py-3 px-8 bg-[#f96628] border-2 border-transparent rounded-full text-white text-base font-bold hover:bg-opacity-90 transition-all duration-300 ease-in-out">
-                            Kirim Pesan
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </div>
 
 @endsection

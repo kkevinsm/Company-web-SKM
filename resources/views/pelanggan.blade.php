@@ -3,7 +3,7 @@
 @section('content')
 
     <!--SECTION 1-->
-    <section class="relative h-screen flex items-center justify-start overflow-hidden">
+    <section class="relative h-[720px]  flex items-center justify-start overflow-hidden">
         
         <div class="absolute top-0 left-0 w-full h-full z-0">
             <img class="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2" src="{{ asset('images/pelanggan-hero.png') }}" alt="Latar Belakang Pelanggan">
@@ -11,10 +11,10 @@
         <div class="absolute top-0 left-0 w-full h-full z-10"></div>
         <div class="container mx-auto px-6">
             <div class="relative z-20 text-white max-w-4xl">
-                <h1 class="text-5xl font-extrabold tracking-tight">
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
                     Tingkatkan Kepercayaan Dengan Menyediakan Baja Yang AMAN Dan HANDAL
                 </h1>
-                <p class="mt-4 text-2xl leading-normal text-white/75">
+                <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
                     PT SAFARI KARYA MAJU
                 </p>
             </div>
@@ -23,7 +23,7 @@
     </section>
 
     <!--SECTION 2-->
-    <section class="bg-white py-20 md:py-28" x-data="{ inView: false }" x-intersect:enter="inView = true">
+    <section class="bg-white py-20 md:py-16" x-data="{ inView: false }" x-intersect:enter="inView = true">
         <div class="container mx-auto px-6">
         
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
@@ -31,7 +31,7 @@
                     <h3 class="text-lg font-semibold text-[#f96628] uppercase tracking-wider">OVERVIEW PELANGGAN</h3>
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2">Bersama Terus Mendukung Kemajuan Industri Bangsa Kita</h2>
                 </div>
-                <div class="md:w-1/2 mt-4 md:mt-0">
+                <div class="md:w-1/2 mt-4 md:mt-12">
                     <p class="text-base text-gray-600 text-justify">
                         Semua produk pabrik baja PT Safari Karya Maju diuji dengan aman dan dapat diandalkan, dengan keahlian selama 25 tahun kami bangga menjadi mitra bagi banyak proyek di negeri ini. Berikut daftar perusahaan yang telah mempercayakan pabrik kami yang berkualitas, salah satunya perusahaan multinasional.
                     </p>
@@ -73,7 +73,7 @@
                         x-transition:enter="transition ease-out duration-500"
                         x-transition:enter-start="opacity-0 transform translate-y-8"
                         x-transition:enter-end="opacity-100 transform translate-y-0"
-                        style="transition-delay: {{ $loop->index * 250 }}ms"
+                        style="transition-delay: {{ $loop->index * 250 }} ms"
                     >
                         <div class="flex flex-col items-center justify-center text-center p-4 bg-gray-50 rounded-lg shadow-sm h-48 w-56 transition duration-300 hover:shadow-xl hover:-translate-y-2">
                 
