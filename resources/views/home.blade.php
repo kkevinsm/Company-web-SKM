@@ -36,7 +36,6 @@
                 </div>
             </div>
 
-            {{-- MODAL UNTUK HERO SECTION - Diletakkan di dalam section-nya sendiri --}}
             <div x-show="showModal" x-transition class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" style="display: none;">
                 <div class="relative bg-black p-2 rounded-lg shadow-lg w-full max-w-6xl" @click.away="showModal = false; videoUrl = ''">
                     <button @click="showModal = false; videoUrl = ''" class="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full text-black flex items-center justify-center z-50">
@@ -296,7 +295,7 @@
                                                 <img src="{{ asset('images/technology/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100">
                                             </div>
                                         </div>
-                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-black [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                                             <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/reverse-tech/' . $card['image']) }}" alt="{{ $card['title'] }}" />
                                         </div>
                                     </div>

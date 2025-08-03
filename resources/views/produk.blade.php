@@ -89,7 +89,7 @@
                                                 <img src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100">
                                             </div>
                                         </div>
-                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-black [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                                             <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" />
                                         </div>
                                     </div>
