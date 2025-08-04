@@ -166,7 +166,7 @@
             class="w-full">
                 <div class="bg-white">
                     <div class="container mx-auto">
-                        <h2 class="text-4xl md:text-5xl font-bold text-black py-16 text-center lg:text-left px-4">Apa yang Kami Kerjakan</h2>
+                        <h2 class="text-4xl sm:text-5xl font-bold text-black py-16 text-center lg:text-left px-4">{{ __('home.what_we_do_title') }}</h2>
                     </div>
                 </div>
                 <div class="bg-youngorange pt-24>
@@ -334,10 +334,10 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <!-- Kolom Kiri: Teks -->
-                    <div class="md:w-3/5 text-white text-center md:text-left">
-                        <h2 class="text-4xl md:text-5xl font-bold">Reels Untuk Anda</h2>
-                        <p class="mt-4 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-                            Lihat lebih dekat PT Safari Karya Maju. Melalui konten Instagram, kami berbagi wawasan industri, cuplikan di balik layar, dan inovasi terbaru kami secara dinamis. Ikuti kami di media sosial untuk tetap terhubung dan mendapatkan semua update berharga dari kami.
+                    <div class="md:w-1/2 text-white text-center md:text-left">
+                        <h2 class="text-4xl md:text-5xl font-bold">{{ __('home.reels_title') }}</h2>
+                        <p class="mt-4 text-base leading-relaxed max-w-xl mx-auto md:mx-0">
+                            {{ __('home.reels_text')}}
                         </p>
                         <a href="https://www.instagram.com/skm_lasercutting/" target="_blank" class="mt-8 inline-flex items-center gap-2 px-6 py-3 border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
                             <span>{{ __('home.our_instagram') }}</span>

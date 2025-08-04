@@ -5,4 +5,9 @@ return [
     'contact_us' => 'Hubungi Kami',
     'section_title' => 'Solusi Fabrikasi Presisi, Berawal Dari Sini.',
     'section_subtitle' => 'Kami siap membantu mewujudkan proyek Anda dengan standar kualitas tertinggi. Diskusikan kebutuhan Anda dengan tim ahli kami sekarang juga.',
+    'name' => 'Nama Lengkap',
+    'email' => 'Alamat Email',
+    'subject' => 'Subjek',
+    'message' => 'Pesan',
+    'send_message' => 'Kirim Pesan',
 ];

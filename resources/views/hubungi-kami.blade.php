@@ -75,6 +75,45 @@
         </div>
     </section>
 
+        <!-- MODAL FORMULIR -->
+    <div x-show="showModal" x-transition.opacity.duration.300 class="fixed inset-0 bg-black/75 flex items-center justify-center z-50 p-4" style="display: none;">
+        <div x-show="showModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" @click.away="showModal = false" class="relative bg-white rounded-lg shadow-xl w-full max-w-2xl">
+            
+                <button @click="showModal = false" class="absolute -top-3 -right-3 w-10 h-10 bg-white rounded-full text-gray-700 hover:text-black shadow-lg flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            
+                <div class="p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ __('hubungi.contact_us') }}</h2>
+                    <form action="#" method="POST" class="space-y-6">
+                        @csrf
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">{{ __('hubungi.name') }}</label>
+                            <input type="text" name="name" id="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">{{ __('hubungi.email') }}</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">{{ __('hubungi.subject') }}</label>
+                            <input type="text" name="subject" id="subject" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">{{ __('hubungi.message') }}</label>
+                            <textarea name="message" id="message" rows="4" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#f96628] focus:border-[#f96628] sm:text-sm"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 h-12 py-3 px-8 bg-[#f96628] border-2 border-transparent rounded-full text-white text-base font-bold hover:bg-opacity-90 transition-all duration-300 ease-in-out">
+                                {{ __('hubungi.send_message') }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 @endsection
