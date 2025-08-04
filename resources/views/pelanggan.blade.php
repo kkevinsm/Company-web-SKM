@@ -11,7 +11,7 @@
         <div class="absolute top-0 left-0 w-full h-full z-10"></div>
         <div class="container mx-auto px-6">
             <div class="relative z-20 text-white max-w-4xl">
-                <h1 class="text-5xl font-extrabold tracking-tight">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-normal">
                     {{ __('pelanggan.title') }}
                 </h1>
                 <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">

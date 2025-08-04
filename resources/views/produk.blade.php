@@ -16,7 +16,7 @@
 
             <div class="container mx-auto px-6">
                 <div class="relative z-20 text-white max-w-4xl">
-                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-normal">
                         {{ __('produk.hero_title') }}
                     </h1>
                     <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
@@ -32,7 +32,7 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 md:w-1/2">{{ __('produk.section_1_title') }}</h2>
-                    <p class="text-base text-gray-600 md:w-1/2 mt-4 md:mt-0">
+                    <p class="text-base text-gray-600 md:w-1/2 mt-4 md:mt-0 text-justify">
                         {{ __('produk.section_1_description') }}
                     </p>
                 </div>
