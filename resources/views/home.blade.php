@@ -9,6 +9,7 @@
                 <video 
                     class="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2" 
                     src="{{ asset('images/teaser-web-skm.mp4') }}" 
+                    poster="{{ asset('images/thumbnail-cover.png') }}"
                     autoplay 
                     loop 
                     muted 
