@@ -336,7 +336,7 @@
                     <!-- Kolom Kiri: Teks -->
                     <div class="md:w-1/2 text-white text-center md:text-left">
                         <h2 class="text-4xl md:text-5xl font-bold">{{ __('home.reels_title') }}</h2>
-                        <p class="mt-4 text-base leading-relaxed max-w-xl mx-auto md:mx-0">
+                        <p class="mt-4 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
                             {{ __('home.reels_text')}}
                         </p>
                         <a href="https://www.instagram.com/skm_lasercutting/" target="_blank" class="mt-8 inline-flex items-center gap-2 px-6 py-3 border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
