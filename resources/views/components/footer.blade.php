@@ -7,7 +7,7 @@
             <div>
                 {{-- Kecilkan teks di mobile --}}
                 <p class="text-sm md:text-base">
-                    <span class="font-bold">Alamat:</span>
+                    <span class="font-bold">{{ __('navbar.address') }}:</span>
                     Dsn. Bakalan RT 001 RW 002, Durensewu, Kec. Pandaan, Pasuruan, Jawa Timur 67156
                 </p>
                 <p class="text-sm md:text-base mt-2">

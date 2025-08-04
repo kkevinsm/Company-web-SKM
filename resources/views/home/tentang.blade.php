@@ -17,10 +17,10 @@
             <div class="container mx-auto px-6">
                 <div class="relative z-20 text-white max-w-4xl">
                     <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
-                        Tentang Kami
+                        {{ __('tentang.hero_title') }}
                     </h1>
                     <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
-                        Telusuri sejarah perjalanan, visi, dan misi kami yang menjadi fondasi operasional.
+                        {{__('tentang.hero_subtitle')}}
                 </div>
             </div>
 
@@ -37,23 +37,14 @@
 
                     <div class="w-full md:w-3/5">
                         <h2 class="text-3xl font-bold text-gray-800 mb-6 text-left">
-                            Sekilas PT Safari Karya Maju
+                            {{ __('tentang.glance_title') }}
                         </h2>
 
                         <div class="space-y-6 text-lg text-gray-700 text-justify">
-                            <p>
-                                <strong>PT SAFARI KARYA MAJU</strong> merupakan perusahaan yang berdiri secara resmi pada awal tahun 2000 dengan nama <strong> CV SAFARI KARYA MAJU</strong>, berdomisili di Pandaan, Jawa Timur.
-                            </p>
-                            <p>
-                                PT SAFARI KARYA MAJU merupakan perusahaan yang bergerak dibidang <strong> sheet cutting dan fabrication. </strong>
-                            </p>
-                            <p>
-                                PT SAFARI KARYA MAJU memiliki pengalaman yang mumpuni dan kompeten dibidangnya karena didukung oleh <strong> mesin produksi yang modern dan handal serta dioperasikan oleh tenaga kerja yang
-                                profesional dan berpengalaman,</strong> sehingga mampu memberikan pelayanan terbaik untuk menjamin kepuasan klien kami. 
-                            </p>
-                            <p>
-                                PT SAFARI KARYA MAJU menjalankan bisnisnya dengan professional dan didukung oleh kemampuan manajerial yang handal. Seiring berkembangnya zaman, dan sesuai visi dan misi perusahaan, maka kami akan terus menerus melakukan <strong> inovasi dan perubahan </strong> demi menjadi perusahaan yang lebih handal sehingga <strong> mampu bersaing secara nasional atau internasional. </strong>
-                            </p>
+                            <p>{!! __('tentang.glance_p1') !!}</p>
+                            <p>{!! __('tentang.glance_p2') !!}</p>
+                            <p>{!! __('tentang.glance_p3') !!}</p>
+                            <p>{!! __('tentang.glance_p4') !!}</p>
                         </div>
                     </div>
                 </div>
@@ -72,16 +63,16 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
                     
                     <div class="bg-black/20 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-white">
-                        <h3 class="text-5xl font-extrabold text-[#f96628] mb-4">VISI</h3>
+                        <h3 class="text-5xl font-extrabold text-[#f96628] mb-4">{{ __('tentang.vision_title') }}</h3>
                         <p class="text-lg leading-relaxed">
-                            Menjadi perusahaan pengolahan sheet metal yang unggul dan memimpin dalam memberikan produk-produk berkualitas dan inovatif serta mampu bersaing dalam pasar global.
+                            {{ __('tentang.vision_content') }}
                         </p>
                     </div>
 
                     <div class="bg-black/20 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-white">
-                        <h3 class="text-5xl font-extrabold text-[#f96628] mb-4">MISI</h3>
+                        <h3 class="text-5xl font-extrabold text-[#f96628] mb-4">{{ __('tentang.mission_title') }}</h3>
                         <p class="text-lg leading-relaxed">
-                            Menjadi perusahaan yang memberikan pelayanan terbaik bagi konsumen, stakeholder, karyawan dan masyarakat. Menjadikan produk sheet metal yang berkualitas dan inovatif bagi kebutuhan pasar.
+                            {{ __('tentang.mission_content') }}
                         </p>
                     </div>
 

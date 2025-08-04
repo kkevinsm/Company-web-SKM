@@ -21,15 +21,15 @@
             <div class="container mx-auto px-6">
                 <div class="relative z-20 text-white max-w-4xl">
                     <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
-                        YOUR ALL METAL SHEET SOLUTION
+                        {{ __('home.hero_title') }}
                     </h1>
                     <p class="mt-4 text-2xl leading-normal text-white/75">
-                        PT SAFARI KARYA MAJU
+                        {{ __('home.hero_subtitle') }}
                     </p>
 
                     <button @click="showModal = true; videoUrl = 'https://www.youtube.com/embed/WT_AxXaOWrs?autoplay=1&mute=1&loop=1&playlist=WT_AxXaOWrs&controls=05'" class="mt-8 inline-flex items-center justify-center gap-2 h-12 py-5 px-8 border-2 border-white rounded-full text-white text-sm shadow-sm hover:px-12 hover:bg-white hover:text-gray-900 transition-all duration-300 ease-in-out">
-                        <span class="leading-normal">Putar Video</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.ww3.org/2000/svg">
+                        <span class="leading-normal">{{ __('home.play_video') }}</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z"></path>
                         </svg>
                     </button>
@@ -61,16 +61,16 @@
                         <div class="flex flex-col gap-10">
                             <div class="flex flex-col gap-4">
                                 <h2 class="text-4xl font-bold text-gray-800">
-                                    Selamat Datang di PT Safari Karya Maju
+                                    {{ __('home.welcome_title') }}
                                 </h2>
                                 <p class="text-lg leading-relaxed text-gray-600 text-justify">
-                                    PT. Safari Karya Maju, kami menganggap integritas sebagai fondasi utama dalam setiap interaksi dengan pelanggan, mitra, dan stakeholder kami. Kami memegang teguh komitmen untuk selalu bertindak secara <strong>jujur, transparan, dan bertanggung jawab.</strong>
+                                    {!! __('home.welcome_text') !!}
                                 </p>
                             </div>
 
                             <div>
-                                <a href="{{ route('welcome') }}" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white hover:px-12 transition-all duration-300 ease-in-out">
-                                    <span>Selengkapnya</span>
+                                <a href="{{ route(app()->getLocale() . '.welcome') }}" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white hover:px-12 transition-all duration-300 ease-in-out">
+                                    <span>{{ __('home.learn_more') }}</span>
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                                     </svg>
@@ -93,16 +93,16 @@
                 <div class="max-w-2xl text-left">
                     <div class="flex flex-col gap-8">
 
-                        <h2 class="text-5xl font-bold">Tentang Kami
+                        <h2 class="text-5xl font-semibold">{{ __('home.about_title') }}
                         </h2>
 
-                        <p class="text-lg leading-relaxed text-justify">
-                            Sejak tahun 2000, CV. Safari Karya Maju yang kemudian bertransformasi menjadi PT. Safari Karya Maju telah menjadi pilar utama dalam industri pengolahan sheet metal dan fabrikasi di Indonesia. Kami bangga menyediakan solusi terbaik dengan kualitas unggul yang didasari oleh nilai-nilai inti perusahaan kami: <strong>INTEGRITY, INNOVATION,</strong> dan <strong>WINNING SPIRIT.</strong>
+                        <p class="text-2xl leading-normal text-justify">
+                            {!! __('home.about_text') !!}
                         </p>
 
                         <div>
-                            <a href="{{ route('tentang') }}" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-6 border border-white rounded-full text-white text-sm font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
-                                <span>Selengkapnya</span>
+                            <a href="{{ route(app()->getLocale() . '.tentang') }}" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-6 border border-white rounded-full text-white text-sm font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
+                                <span>{{ __('home.learn_more') }}</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                                 </svg>
@@ -120,27 +120,27 @@
                 services: [
                     {
                         title: 'Laser Cutting',
-                        description: 'Menggunakan mesin CNC Fiber Laser 1500 Watt, 6000 Watt, hingga 60kW untuk memastikan hasil potong yang presisi, tanpa barier dan rapi. Mampu mengerjakan segala jenis metal...',
+                        description: `{{ __('home.services.laser_cutting.description') }}`,
                         image: '{{ asset('images/works/laser-cut.jpg') }}'
                     },
                     {
                         title: 'Laser Welding',
-                        description: 'Menggunakan mesin laser welding yang canggih, modern dan cepat untuk hasil sambungan yang rapi dan kuat. Menjadikan proses fabrikasi jauh lebih cepat dan hasil akhir produk yang bermutu tinggi.',
+                        description: `{{ __('home.services.laser_welding.description') }}`,
                         image: '{{ asset('images/works/laser-weld.png') }}'
                    },
                     {
                         title: 'Metal Bending',
-                        description: 'Dengan menggunakan mesin CNC Bending 160 ton berkapasitas panjang 3,2 meter, siap menghasilkan hasil tekukan yang presisi untuk material metal. Tersedia 4 pilihan V DIES: V8, V12, V16 dan V25.',
+                        description: `{{ __('home.services.metal_bending.description') }}`,
                         image: '{{ asset('images/works/metal-bend.png') }}'
                     },
                     {
                         title: 'Machining',
-                        description: 'Proses machining presisi untuk berbagai komponen industri. Dengan teknologi terkini, kami memastikan setiap detail dikerjakan dengan akurasi tinggi untuk memenuhi standar kualitas tertinggi.',
+                        description: `{{ __('home.services.machining.description') }}`,
                         image: '{{ asset('images/works/metal-fab.png') }}'
                     },
                     {
                         title: 'Assembly',
-                        description: 'Jasa perakitan komponen dengan standar industri. Tim kami yang berpengalaman memastikan semua bagian terpasang dengan sempurna untuk fungsionalitas dan daya tahan maksimal.',
+                        description: `{{ __('home.services.assembly.description') }}`,
                         image: '{{ asset('images/works/non-metal.png') }}'
                     }
                 ],
@@ -166,11 +166,11 @@
             class="w-full">
                 <div class="bg-white">
                     <div class="container mx-auto">
-                        <h2 class="text-5xl sm:text-5xl font-bold text-black py-16 text-center lg:text-left px-4">Apa yang Kami Kerjakan</h2>
+                        <h2 class="text-4xl sm:text-5xl font-semibold text-black py-16 text-center lg:text-left px-4">Apa yang Kami Kerjakan</h2>
                     </div>
                 </div>
                 <div class="bg-youngorange pt-24>
-                     <div class="container mx-auto px-6">
+                     <div class="container mx-auto">
                         <div class="relative flex flex-col md:grid md:grid-cols-2 gap-6 items-center">
                             <!-- Image Section -->
                             <div class="relative w-full aspect-[4/3] md:h-[600px] overflow-hidden order-1">
@@ -190,7 +190,7 @@
 
                             <!-- Cards Section -->
                             <div class="w-full md:w-auto px-0 md:absolute md:left-[30%] lg:left-[40%] md:right-0 md:top-1/2 md:-translate-y-1/2 z-10 order-2 -mt-56 md:-mt-0 py-10 md:py-0">
-                                <div class="flex overflow-hidden gap-10 py-4">
+                                <div class="flex overflow-hidden gap-10 py-4 pl-[calc(50%-170px)] md:pl-0">
                                     <template x-for="(service, index) in orderedServices" :key="service.title">
                                         <div class="flex-shrink-0 w-[340px]" 
                                              x-show="index < 3" 
@@ -216,7 +216,7 @@
                                     </template>
                                 </div>
                                  <!-- Navigation Buttons -->
-                                <div class="flex justify-end gap-2 mt-4 items-center max-w-[620px] mx-auto">
+                                <div class="flex justify-center md:justify-end gap-2 mt-4 items-center max-w-[620px] mx-auto">
                                     <button @click="prev()" class="group !static !w-12 !h-12 !m-0 flex items-center justify-center bg-white border border-slate-400 rounded-lg shadow hover:bg-[#f96628] transition-colors">
                                         <span class="sr-only">Prev</span>
                                         <svg class="w-6 h-6 text-slate-600 opacity-60 group-hover:text-white group-hover:opacity-100 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
@@ -237,9 +237,9 @@
         <section class="bg-white py-20 md:py-28">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 md:w-1/2">Teknologi Kami</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 md:w-1/2">{{ __('home.technology_title') }}</h2>
                     <p class="text-base text-gray-600 md:w-1/2 mt-4 md:mt-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque ex in odio aliquet, pharetra tincidunt turpis eleifend. Suspendisse vitae mollis dui.
+                        {{ __('home.technology_text') }}
                     </p>
                 </div>
 
@@ -320,7 +320,7 @@
                             </button>
                             <div class="aspect-w-16 aspect-h-9">
                                 <video x-show="videoUrl" :src="videoUrl" controls autoplay class="w-full h-full">
-                                    Browser Anda tidak mendukung tag video.
+                                    {{ __('home.video_unsupported') }}
                                 </video>
                             </div>
                         </div>
@@ -334,13 +334,13 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <!-- Kolom Kiri: Teks -->
-                    <div class="md:w-3/5 text-white text-center md:text-left">
+                    <div class="md:w-1/2 text-white text-center md:text-left">
                         <h2 class="text-4xl md:text-5xl font-bold">Reels Untuk Anda</h2>
-                        <p class="mt-4 text-lg text-justify leading-relaxed mx-auto md:mx-0">
+                        <p class="mt-4 text-base leading-relaxed max-w-xl mx-auto md:mx-0">
                             Lihat lebih dekat PT Safari Karya Maju. Melalui konten Instagram, kami berbagi wawasan industri, cuplikan di balik layar, dan inovasi terbaru kami secara dinamis. Ikuti kami di media sosial untuk tetap terhubung dan mendapatkan semua update berharga dari kami.
                         </p>
                         <a href="https://www.instagram.com/skm_lasercutting/" target="_blank" class="mt-8 inline-flex items-center gap-2 px-6 py-3 border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#f96628] hover:px-10 transition-all duration-300 ease-in-out">
-                            <span>Instagram Kami</span>
+                            <span>{{ __('home.our_instagram') }}</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
                         </a>
                     </div>

@@ -31,8 +31,8 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                         <div class="md:col-span-2 space-y-4">
                             <h2 class="text-4xl font-bold text-gray-900">Workshop Safari Karya Maju</h2>
-                            <a href="https://maps.app.goo.gl/oHs6VHPeXhuDN3nM8" target="_blank" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white hover:px-12 transition-all duration-300">
-                                <span>Dapatkan Arah</span>
+                            <a href="https://maps.app.goo.gl/oHs6VHPeXhuDN3nM8" target="_blank" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-black rounded-full text-black text-base font-bold hover:bg-[#f96628] hover:border-[#f96628] hover:text-white transition-colors duration-300">
+                                <span>{{ __('hubungi.get_direction') }}</span>
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                             </a>
                         </div>
@@ -63,12 +63,12 @@
         <img src="{{ asset('images/solusi-section.png') }}" alt="Latar Belakang Fabrikasi" class="absolute inset-0 w-full h-full object-cover z-0">
         <div class="relative container mx-auto px-6 z-10">
             <div class="max-w-4xl mx-auto flex flex-col items-center gap-8">
-                <h2 class="text-5xl font-bold">Solusi Fabrikasi Presisi, Berawal Dari Sini.</h2>
+                <h2 class="text-5xl font-bold">{{ __('hubungi.section_title') }}</h2>
                 <p class="text-lg text-white/80 leading-relaxed">
-                    Kami siap membantu mewujudkan proyek Anda dengan standar kualitas tertinggi. Diskusikan kebutuhan Anda dengan tim ahli kami sekarang juga.
+                    {{ __('hubungi.section_subtitle') }}
                 </p>
-                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-white rounded-full text-white text-base font-bold hover:bg-white hover:text-black hover:px-12 transition-all duration-300">
-                    <span>Hubungi Kami</span>
+                <button @click="showModal = true" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-white rounded-full text-white text-base font-bold hover:bg-white hover:text-black transition-colors duration-300">
+                    <span>{{ __('hubungi.contact_us') }}</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </a>
             </div>
