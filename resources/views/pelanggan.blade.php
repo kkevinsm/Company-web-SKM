@@ -1,4 +1,6 @@
 @extends('layouts.guest')
+@section('title', 'Pelanggan Kami - PT Safari Karya Maju')
+@section('description', 'Lihat daftar perusahaan & industri terkemuka yang telah mempercayakan kebutuhan fabrikasi metal mereka kepada PT Safari Karya Maju. Kemitraan yang didasari kualitas dan kepercayaan.')
 
 @section('content')
 

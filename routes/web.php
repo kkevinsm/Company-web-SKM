@@ -1,6 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
+
+Route::get('/generate-sitemap', function () {
+    $sitemap = Sitemap::create();
+
+    $sitemap->add(Url::create('/en')->addAlternate('/', 'id')->setPriority(1.0));
+    $sitemap->add(Url::create('/en/produk')->addAlternate('/produk', 'id'));
+    $sitemap->add(Url::create('/en/pelanggan')->addAlternate('/pelanggan', 'id'));
+    $sitemap->add(Url::create('/en/sertifikasi')->addAlternate('/sertifikasi', 'id'));
+    $sitemap->add(Url::create('/en/tentang')->addAlternate('/tentang', 'id'));
+    $sitemap->add(Url::create('/en/hubungi-kami')->addAlternate('/hubungi-kami', 'id'));
+    $sitemap->add(Url::create('/en/welcome')->addAlternate('/welcome', 'id'));
+
+    $sitemap->writeToFile(public_path('sitemap.xml'));
+
+    return 'Sitemap Generated with all routes!';
+});
+
 
 // --- BAHASA INGGRIS (/en) ---
 Route::prefix('en')->middleware('set.locale')->name('en.')->group(function () {

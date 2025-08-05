@@ -1,5 +1,8 @@
 @extends('layouts.guest')
 
+@section('title', 'Beranda - PT Safari Karya Maju | Solusi Fabrikasi Metal')
+@section('description', 'PT Safari Karya Maju menyediakan solusi fabrikasi metal dan laser cutting terdepan di Indonesia. Temukan teknologi dan layanan unggulan kami untuk proyek Anda.')
+
 @section('content')
     <link rel="prefetch" href="{{ route(app()->getLocale() . '.produk') }}" as="document">
     <link rel="prefetch" href="{{ route(app()->getLocale() . '.pelanggan') }}" as="document">

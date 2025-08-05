@@ -1,4 +1,6 @@
 @extends('layouts.guest')
+@section('title', 'Sertifikasi & Lisensi - PT Safari Karya Maju')
+@section('description', 'Lihat daftar lengkap sertifikasi ISO dan lisensi resmi yang dimiliki oleh PT Safari Karya Maju sebagai bukti komitmen kami terhadap kualitas dan standar internasional.')
 
 @section('content')
 

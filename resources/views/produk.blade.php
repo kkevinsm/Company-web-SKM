@@ -1,4 +1,6 @@
 @extends('layouts.guest')
+@section('title', 'Produk Kami - PT Safari Karya Maju')
+@section('description', 'Jelajahi berbagai produk fabrikasi metal unggulan kami. Dari laser cutting presisi hingga bending dan assembly, kami menyediakan solusi berkualitas tinggi untuk industri Anda.')
 
 @section('content')
 
@@ -66,22 +68,21 @@
                     <div x-ref="slider">
                         @php
                             $cards = [
-                                ['title' => 'FIBER LASER', 'subtitle' => 'GLORYSTAR 1500W', 'image' => '1.png', 'video_file' => 'video1.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'KRRASS 6000W', 'image' => '2.png', 'video_file' => 'video2.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'JIATAI XDP SERIES', 'image' => '3.png', 'video_file' => 'video3.mp4'],
-                                ['title' => 'BENDING MACHINE', 'subtitle' => 'GLB - 16032', 'image' => '4.png', 'video_file' => 'video4.mp4'],
-                                ['title' => 'BRAKE MACHINE', 'subtitle' => 'WC67Y', 'image' => '5.png', 'video_file' => 'video5.mp4'],
-                                ['title' => 'ROUTER MACHINE', 'subtitle' => 'A2 - 1325', 'image' => '6.png', 'video_file' => 'video6.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'GLORYSTAR 1500W', 'image' => '7.png', 'video_file' => 'video7.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'KRRASS 6000W', 'image' => '8.png', 'video_file' => 'video8.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'JIATAI XDP SERIES', 'image' => '9.png', 'video_file' => 'video9.mp4'],
+                                ['title' => 'FIBER LASER', 'subtitle' => 'GLORYSTAR 1500W', 'image' => '1.png'],
+                                ['title' => 'FIBER LASER', 'subtitle' => 'KRRASS 6000W', 'image' => '2.png'],
+                                ['title' => 'FIBER LASER', 'subtitle' => 'JIATAI XDP SERIES', 'image' => '3.png'],
+                                ['title' => 'BENDING MACHINE', 'subtitle' => 'GLB - 16032', 'image' => '4.png'],
+                                ['title' => 'BRAKE MACHINE', 'subtitle' => 'WC67Y', 'image' => '5.png'],
+                                ['title' => 'ROUTER MACHINE', 'subtitle' => 'A2 - 1325', 'image' => '6.png'],
+                                ['title' => 'FIBER LASER', 'subtitle' => 'GLORYSTAR 1500W', 'image' => '7.png'],
+                                ['title' => 'FIBER LASER', 'subtitle' => 'KRRASS 6000W', 'image' => '8.png'],
+                                ['title' => 'FIBER LASER', 'subtitle' => 'JIATAI XDP SERIES', 'image' => '9.png'],
                             ];
                         @endphp
 
                         @foreach ($cards as $card)
                             <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
                                 <div
-                                    @click="showModal = true; videoUrl = '{{ asset('videos/' . $card['video_file']) }}'"
                                     class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
                                 >
                                     <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -123,28 +124,6 @@
                 </div>
             </div>
         </section>
-
-        <div 
-            x-show="showModal" 
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="transition ease-in duration-300"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-            style="display: none;">
-            
-                <div class="relative bg-black p-2 rounded-lg shadow-lg w-full max-w-4xl" @click.away="showModal = false; videoUrl = ''">
-                    <button @click="showModal = false; videoUrl = ''" class="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full text-black flex items-center justify-center z-50">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                    
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe :src="videoUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="w-full h-full"></iframe>
-                    </div>
-                </div>
-        </div>
 
     </div>
 

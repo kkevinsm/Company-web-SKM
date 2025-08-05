@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <meta name="description" content="@yield('description', 'PT Safari Karya Maju adalah perusahaan terkemuka di bidang fabrikasi metal dan laser cutting di Indonesia, menyediakan solusi presisi dengan teknologi modern.')">
+        <title>@yield('title', 'PT Safari Karya Maju')</title>
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet" />
         <link rel="dns-prefetch" href="http://googleusercontent.com/youtube.com/">
