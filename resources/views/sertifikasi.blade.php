@@ -54,7 +54,7 @@
                     @foreach ($sertifikasi as $sertif)
                         <div>
                             <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                                <img src="{{ asset('images/sertif/' . $sertif['image']) }}" alt="{{ $sertif['title'] }}" class="w-full h-auto object-contain rounded shadow-md">
+                                <img src="{{ asset('images/sertif/' . $sertif['image']) }}" alt="{{ $sertif['title'] }}" class="w-full h-auto object-contain rounded shadow-md" loading="lazy" decoding="async">
                             </div>
                             <div class="mt-4 text-center">
                                 <h3 class="text-base font-bold text-gray-800">{{ $sertif['title'] }}</h3>

@@ -1,6 +1,10 @@
 @extends('layouts.guest')
 
 @section('content')
+    <link rel="prefetch" href="{{ route(app()->getLocale() . '.produk') }}" as="document">
+    <link rel="prefetch" href="{{ route(app()->getLocale() . '.pelanggan') }}" as="document">
+    <link rel="prefetch" href="{{ route(app()->getLocale() . '.sertifikasi') }}" as="document">
+    <link rel="prefetch" href="{{ route(app()->getLocale() . '.hubungi-kami') }}" as="document">
 
         <!-- HERO SECTION -->
         <section x-data="{ showModal: false, videoUrl: '' }" class="relative h-screen flex items-center justify-start overflow-hidden">
@@ -55,7 +59,7 @@
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
 
                     <div class="w-full md:w-1/2 flex justify-center">
-                        <img src="{{ asset('images/logo-skm-color.png') }}" alt="Logo SKM Berwarna" class="w-full max-w-xs md:max-w-md">
+                        <img src="{{ asset('images/logo-skm-color.png') }}" alt="Logo SKM Berwarna" class="w-full max-w-xs md:max-w-md" loading="lazy" decoding="async">
                     </div>
 
                     <div class="w-full md:w-1/2 text-left">
@@ -86,7 +90,7 @@
 
         <!-- SECTION 3 -->
         <section class="relative bg-gray-800 text-white">
-            <img src="{{ asset('images/about-us-bg.png') }}" alt="Tentang Kami Background" class="absolute inset-0 w-full h-full object-cover z-0">
+            <img src="{{ asset('images/about-us-bg.png') }}" alt="Tentang Kami Background" class="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" decoding="async">
 
             <div class="absolute inset-0 bg-black/60 z-10"></div>
 
@@ -184,7 +188,7 @@
                                          x-transition:leave-start="opacity-100" 
                                          x-transition:leave-end="opacity-0" 
                                          class="absolute inset-0">
-                                        <img :src="service.image" :alt="service.title" class="w-full h-full object-cover object-center shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/720x620/cccccc/ffffff?text=Image+Not+Found';">
+                                        <img :src="service.image" :alt="service.title" class="w-full h-full object-cover object-center shadow-lg" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/720x620/cccccc/ffffff?text=Image+Not+Found';">
                                     </div>
                                 </template>
                             </div>
@@ -293,11 +297,11 @@
                                     <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                                         <div class="absolute inset-0 [backface-visibility:hidden]">
                                             <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
-                                                <img src="{{ asset('images/technology/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100">
+                                                <img src="{{ asset('images/technology/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                         <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/reverse-tech/' . $card['image']) }}" alt="{{ $card['title'] }}" />
+                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/reverse-tech/' . $card['image']) }}" alt="{{ $card['title'] }}" loading="lazy" decoding="async" />
                                         </div>
                                     </div>
                                 </div>

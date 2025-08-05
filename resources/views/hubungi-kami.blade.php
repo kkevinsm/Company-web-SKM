@@ -38,17 +38,17 @@
                         </div>
                         <div class="space-y-4 text-gray-700">
                             <div class="flex items-start gap-3">
-                                <img src="{{ asset('images/marker.svg') }}" alt="Alamat" class="w-6 h-6 mt-1">
+                                <img src="{{ asset('images/marker.svg') }}" alt="Alamat" class="w-6 h-6 mt-1" loading="lazy" decoding="async">
                                 <div>
                                     <p class="leading-relaxed">Dsn. Bakalan RT 001 RW 002, Durensewu, Kec. Pandaan, Pasuruan, Jawa Timur 67156</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-3">
-                                <img src="{{ asset('images/phone.svg') }}" alt="Telepon" class="w-6 h-6">
+                                <img src="{{ asset('images/phone.svg') }}" alt="Telepon" class="w-6 h-6" loading="lazy" decoding="async">
                                 <span>(0343) 633 704</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <img src="{{ asset('images/fax.svg') }}" alt="Fax" class="w-6 h-6">
+                                <img src="{{ asset('images/fax.svg') }}" alt="Fax" class="w-6 h-6" loading="lazy" decoding="async">
                                 <span>(0343) 633 704</span>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
 
     <!-- SECTION 3 -->
     <section class="relative py-24 text-white text-center">
-        <img src="{{ asset('images/solusi-section.png') }}" alt="Latar Belakang Fabrikasi" class="absolute inset-0 w-full h-full object-cover z-0">
+        <img src="{{ asset('images/solusi-section.png') }}" alt="Latar Belakang Fabrikasi" class="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" decoding="async">
         <div class="relative container mx-auto px-6 z-10">
             <div class="max-w-4xl mx-auto flex flex-col items-center gap-8">
                 <h2 class="text-5xl font-bold">{{ __('hubungi.section_title') }}</h2>

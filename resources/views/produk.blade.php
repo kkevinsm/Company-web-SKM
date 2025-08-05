@@ -9,7 +9,8 @@
                 <img 
                     class="w-full h-full object-cover" 
                     src="{{ asset('images/hero-image-produk.png') }}" 
-                    alt="Latar Belakang Halaman Produk">
+                    alt="Latar Belakang Halaman Produk"
+                    >
             </div>
 
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
@@ -86,11 +87,11 @@
                                     <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                                         <div class="absolute inset-0 [backface-visibility:hidden]">
                                             <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
-                                                <img src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100">
+                                                <img src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                         <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" />
+                                            <img class="h-full w-full rounded-2xl object-cover" src="{{ asset('images/products/' . $card['image']) }}" alt="{{ $card['title'] }}" loading="lazy" decoding="async" />
                                         </div>
                                     </div>
                                 </div>
