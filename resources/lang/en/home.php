@@ -16,27 +16,35 @@ return [
     'about_text' => 'Since 2000, CV. Safari Karya Maju, which later transformed into PT. Safari Karya Maju, has been a major pillar in the sheet metal processing and fabrication industry in Indonesia. We are proud to provide the best solutions with superior quality based on our core company values: <strong>INTEGRITY, INNOVATION,</strong> and <strong>WINNING SPIRIT.</strong>',
 
     // What We Do Section
-    'what_we_do_title' => 'What We Do',
-    'services' => [
+    'what_we_do_title' => 'What Can We Do',
+'services' => [
         'laser_cutting' => [
             'title' => 'Laser Cutting',
-            'description' => 'Using CNC Fiber Laser machines of 1500 Watt, 6000 Watt, up to 60kW to ensure precise, barrier-free, and clean cutting results. Capable of working on all types of metal...',
+            'description' => 'Utilizing high-power CNC Fiber Laser machines ranging from 1500W, 6000W, up to 60kW to deliver precise, clean, and burr-free cuts. We process a wide variety of metals, including iron plates, stainless steel (up to 40mm), aluminum (up to 5mm), brass (5mm), and copper (2mm), all with rapid turnaround times. Furthermore, our system offers advanced bevel cutting at angles from -45 to +45 degrees on an expansive working area of up to 12 x 3.5 meters.',
         ],
         'laser_welding' => [
             'title' => 'Laser Welding',
-            'description' => 'Using advanced, modern, and fast laser welding machines for neat and strong joints. Making the fabrication process much faster with high-quality product outcomes.',
+            'description' => 'Experience superior fabrication with our advanced, modern, and rapid laser welding services, engineered to produce exceptionally clean and strong joints. This technology significantly accelerates the fabrication timeline while ensuring a high-quality, premium finish for your products.',
         ],
         'metal_bending' => [
             'title' => 'Metal Bending',
-            'description' => 'Using a 160-ton CNC Bending machine with a length capacity of 3.2 meters, ready to produce precise bends for metal materials. 4 V DIES options available: V8, V12, V16, and V25.',
+            'description' => 'Our 160-ton CNC Press Brake, with a 3.2-meter bending capacity, is ready to produce highly accurate and consistent bends on various metal materials. To meet your specific bend radius requirements, we offer a selection of V-dies, including V8, V12, V16, and V25.',
         ],
-        'machining' => [
-            'title' => 'Machining',
-            'description' => 'Precision machining processes for various industrial components. With the latest technology, we ensure every detail is crafted with high accuracy to meet the highest quality standards.',
+        'metal_fabrication' => [
+            'title' => 'Metal Fabrication',
+            'description' => 'We provide comprehensive assembly and fabrication services for a wide range of products. Our expertise covers both architectural and industrial applications, including interior/exterior design elements like stair railings, fences, canopies, and facades, as well as custom components for large-scale industrial needs.',
         ],
-        'assembly' => [
-            'title' => 'Assembly',
-            'description' => 'Component assembly services with industry standards. Our experienced team ensures all parts are perfectly assembled for maximum functionality and durability.',
+        'cnc_router' => [
+            'title' => 'CNC Router',
+            'description' => 'Our CNC routing services produce fabricated products from various materials, including wood, PVC, ACP, and more. We deliver clean, smooth cuts and are capable of creating complex, intricate shapes and engravings tailored precisely to client specifications.',
+        ],
+        'bevelling' => [
+            'title' => 'Bevelling',
+            'description' => 'Our powerful Ironworker machine enables the rapid and precise forming of various custom metal products and components. It can punch and shape parts to your exact design and mold specifications, ensuring fast and accurate production.',
+        ],
+        'powder_coating' => [
+            'title' => 'Powder Coating',
+            'description' => 'We offer a durable finishing solution with our 7-step powder coating process. This meticulous procedure, including oil removal and a two-stage coating application, ensures superior product resilience against corrosion. The resulting finish is engineered for exceptional durability, with an outdoor lifespan of up to 5 years.',
         ],
     ],
 

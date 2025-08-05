@@ -135,21 +135,31 @@
                         title: 'Laser Welding',
                         description: `{{ __('home.services.laser_welding.description') }}`,
                         image: '{{ asset('images/works/laser-weld.png') }}'
-                   },
+                    },
                     {
                         title: 'Metal Bending',
                         description: `{{ __('home.services.metal_bending.description') }}`,
                         image: '{{ asset('images/works/metal-bend.png') }}'
                     },
                     {
-                        title: 'Machining',
-                        description: `{{ __('home.services.machining.description') }}`,
+                        title: 'Metal Fabrication',
+                        description: `{{ __('home.services.metal_fabrication.description') }}`,
                         image: '{{ asset('images/works/metal-fab.png') }}'
                     },
                     {
-                        title: 'Assembly',
-                        description: `{{ __('home.services.assembly.description') }}`,
+                        title: 'CNC Router',
+                        description: `{{ __('home.services.cnc_router.description') }}`,
                         image: '{{ asset('images/works/non-metal.png') }}'
+                    },
+                    {
+                        title: 'Bevelling',
+                        description: `{{ __('home.services.bevelling.description') }}`,
+                        image: '{{ asset('images/works/bevelling.png') }}'
+                    },
+                    {
+                        title: 'Powder Coating',
+                        description: `{{ __('home.services.powder_coating.description') }}`,
+                        image: '{{ asset('images/works/powder-coat.png') }}'
                     }
                 ],
                 selectedIndex: 0,

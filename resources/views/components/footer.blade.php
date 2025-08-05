@@ -3,7 +3,7 @@
         <div class="flex flex-col items-center text-center gap-8 mb-12 md:mb-16">
             <img class="w-64 md:w-80" src="{{ asset('images/skm-horizontal.png') }}" alt="Logo SKM">
             <div>
-]                <p class="text-sm md:text-base">
+                <p class="text-sm md:text-base">
                     <span class="font-bold">{{ __('navbar.address') }}:</span>
                     Dsn. Bakalan RT 001 RW 002, Durensewu, Kec. Pandaan, Pasuruan, Jawa Timur 67156
                 </p>
