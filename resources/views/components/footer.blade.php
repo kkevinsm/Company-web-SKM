@@ -20,10 +20,18 @@
                 © Copyright PT Safari Karya Maju 2025. All Right Reserved.
             </p>
             <div class="flex items-center gap-4">
-                <img class="w-6 h-6" src="{{ asset('images/icon-fb.png') }}" alt="Facebook">
-                <img class="w-6 h-6" src="{{ asset('images/icon-lin.png') }}" alt="LinkedIn">
-                <img class="w-6 h-6" src="{{ asset('images/icon-yt.png') }}" alt="YouTube">
-                <img class="w-6 h-6" src="{{ asset('images/icon-ig.png') }}" alt="Instagram">
+                <a href="https://www.facebook.com/safarikaryamaju" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="{{ asset('images/icon-fb.png') }}" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/safarikaryamaju/" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="{{ asset('images/icon-lin.png') }}" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/@safarikaryamaju" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="{{ asset('images/icon-yt.png') }}" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/skm_lasercutting" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="{{ asset('images/icon-ig.png') }}" alt="Instagram">
+                </a>
             </div>
         </div>
     </div>
@@ -52,7 +60,9 @@
   },
   "sameAs": [
     "https://www.youtube.com//@safarikaryamaju",
-    "https://www.instagram.com/skm_lasercutting/"
+    "https://www.instagram.com/skm_lasercutting/",
+    "https://www.facebook.com/safarikaryamaju",
+    "https://www.linkedin.com/company/safarikaryamaju/"
   ]
 }
 </script>

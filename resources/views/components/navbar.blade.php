@@ -1,12 +1,6 @@
 <nav x-data="{ open: false }" class="text-white absolute top-0 w-full z-50">
     <div class="container mx-auto px-6">
         <div class="flex items-center justify-between h-32">
-
-            <div class="flex items-center gap-2">
-                <img class="w-12 h-12" src="{{ asset('images/LOGO SKM ONLY WHITE (1) 1.png') }}" alt="Safari Karya Maju Logo" />
-                <span class="text-xl font-bold tracking-wider">SAFARI KARYA MAJU</span>
-            </div>
-
             @php
                 $currentLocale = app()->getLocale();
                 $currentRouteName = request()->route()->getName();
@@ -21,6 +15,10 @@
                     $switchToRouteName = 'id.' . substr($currentRouteName, 3);
                 }
             @endphp
+            <a href="{{ route($currentLocale . '.home') }}" class="flex items-center gap-2">
+                <img class="w-12 h-12" src="{{ asset('images/LOGO SKM ONLY WHITE (1) 1.png') }}" alt="Safari Karya Maju Logo" />
+                <span class="text-xl font-bold tracking-wider">SAFARI KARYA MAJU</span>
+            </a>
 
             <div class="hidden md:flex items-center space-x-12">
                 <a href="{{ route($currentLocale . '.home') }}" class="font-medium hover:text-blue-300 transition-colors">{{ __('navbar.home') }}</a>
