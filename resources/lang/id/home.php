@@ -50,7 +50,7 @@ return [
 
     // Our Technology Section
     'technology_title' => 'Teknologi Kami',
-    'technology_text' => 'Ini adalah teks placeholder. Mohon sediakan konten yang relevan untuk bagian ini untuk menjelaskan teknologi yang digunakan oleh perusahaan Anda.',
+    'technology_text' => 'Untuk memberikan hasil terbaik bagi Anda, kami mengandalkan teknologi fabrikasi paling modern. Peralatan canggih kami memungkinkan pengerjaan yang lebih cepat, hasil presisi, serta kualitas konsisten yang dapat diandalkan oleh para pelanggan kami di berbagai sektor industri.',
     'video_unsupported' => 'Browser Anda tidak mendukung tag video.',
 
     // Reels Section

@@ -45,7 +45,7 @@
             </div>
 
             <div x-show="showModal" x-transition class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" style="display: none;">
-                <div class="relative bg-black p-2 rounded-lg shadow-lg w-full max-w-6xl" @click.away="showModal = false; videoUrl = ''">
+                <div class="relative bg-black p-1 rounded-lg shadow-lg w-full max-w-6xl" @click.away="showModal = false; videoUrl = ''">
                     <button @click="showModal = false; videoUrl = ''" class="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full text-black flex items-center justify-center z-50">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
@@ -294,10 +294,10 @@
                                 ['title' => 'FIBER LASER', 'subtitle' => 'JIATAI XDP SERIES', 'image' => '3.png', 'video_file' => 'video3.mp4'],
                                 ['title' => 'BENDING MACHINE', 'subtitle' => 'GLB - 16032', 'image' => '4.png', 'video_file' => 'video4.mp4'],
                                 ['title' => 'BRAKE MACHINE', 'subtitle' => 'WC67Y', 'image' => '5.png', 'video_file' => 'video5.mp4'],
-                                ['title' => 'ROUTER MACHINE', 'subtitle' => 'A2 - 1325', 'image' => '6.png', 'video_file' => 'video6.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'GLORYSTAR 1500W', 'image' => '7.png', 'video_file' => 'video7.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'KRRASS 6000W', 'image' => '8.png', 'video_file' => 'video8.mp4'],
-                                ['title' => 'FIBER LASER', 'subtitle' => 'JIATAI XDP SERIES', 'image' => '9.png', 'video_file' => 'video9.mp4'],
+                                ['title' => 'CNC ROUTER MACHINE', 'subtitle' => 'A2 - 1325', 'image' => '6.png', 'video_file' => 'video6.mp4'],
+                                ['title' => 'HYDRAULIC IRONWORKER', 'subtitle' => 'KRRASS', 'image' => '7.png', 'video_file' => 'video7.mp4'],
+                                ['title' => 'LASER WELDING', 'subtitle' => 'BODOR 1500 PRO', 'image' => '8.png', 'video_file' => 'video8.mp4'],
+                                ['title' => 'POWDER COATING', 'subtitle' => 'POWDER COATING', 'image' => '9.png', 'video_file' => 'video9.mp4'],
                             ];
                         @endphp
 
@@ -332,11 +332,11 @@
                     </div>
 
                     <div x-show="showModal" x-transition class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" style="display: none;">
-                        <div class="relative bg-black p-2 rounded-lg shadow-lg w-full max-w-6xl" @click.away="showModal = false; videoUrl = ''">
+                        <div class="relative bg-black p-0.5 rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm" @click.away="showModal = false; videoUrl = ''">
                             <button @click="showModal = false; videoUrl = ''" class="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full text-black flex items-center justify-center z-50">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
                             </button>
-                            <div class="aspect-w-16 aspect-h-9">
+                            <div class="aspect-w-9 aspect-h-16">
                                 <video x-show="videoUrl" :src="videoUrl" controls autoplay class="w-full h-full">
                                     {{ __('home.video_unsupported') }}
                                 </video>

@@ -50,7 +50,7 @@ return [
 
     // Our Technology Section
     'technology_title' => 'Our Technology',
-    'technology_text' => 'This is placeholder text. Please provide relevant content for this section to explain the technologies your company uses.',
+    'technology_text' => 'To provide the best results for you, we rely on the most modern fabrication technology. Our advanced equipment enables faster processing, precise results, and consistent quality that our customers in various industrial sectors can rely on.',
     'video_unsupported' => 'Your browser does not support the video tag.',
 
     // Reels Section
