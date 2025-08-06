@@ -33,5 +33,7 @@
         @include('components.whatsapp')
         @include('components.footer')
 
+        <script async src="https://www.tiktok.com/embed.js"></script>
+
     </body>
 </html>

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
+use App\Http\Controllers\HomeController;
+
 
 Route::get('/generate-sitemap', function () {
     $sitemap = Sitemap::create();
@@ -24,7 +26,7 @@ Route::get('/generate-sitemap', function () {
 // --- BAHASA INGGRIS (/en) ---
 Route::prefix('en')->middleware('set.locale')->name('en.')->group(function () {
     
-    Route::get('/', function () { return view('home'); })->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/produk', function () { return view('produk'); })->name('produk');
     Route::get('/pelanggan', function () { return view('pelanggan'); })->name('pelanggan');
     Route::get('/sertifikasi', function () { return view('sertifikasi'); })->name('sertifikasi');
@@ -37,7 +39,7 @@ Route::prefix('en')->middleware('set.locale')->name('en.')->group(function () {
 // --- BAHASA INDONESIA (/) ---
 Route::middleware('set.locale')->name('id.')->group(function () {
 
-    Route::get('/', function () { return view('home'); })->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/produk', function () { return view('produk'); })->name('produk');
     Route::get('/pelanggan', function () { return view('pelanggan'); })->name('pelanggan');
     Route::get('/sertifikasi', function () { return view('sertifikasi'); })->name('sertifikasi');
