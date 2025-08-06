@@ -32,7 +32,7 @@
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
                     
                     <div class="w-full md:w-2/5 flex-shrink-0">
-                        <img src="{{ asset('images/Mask-group2.png') }}" alt="Sekilas tentang PT Safari Karya Maju" class="w-full h-auto">
+                        <img src="{{ asset('images/Mask-group.png') }}" alt="Sekilas tentang PT Safari Karya Maju" class="w-full h-auto">
                     </div>
 
                     <div class="w-full md:w-3/5">
