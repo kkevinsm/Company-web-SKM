@@ -24,7 +24,7 @@ return [
         ],
         'laser_welding' => [
             'title' => 'Laser Welding',
-            'description' => 'Menggunakan mesin las laser yang canggih, modern dan cepat untuk hasil sambungan yang rapi dan kuat. Menjadikan proses fabrikasi jauh lebih cepat dan hasil akhir produk yang bermutu tinggi.',
+            'description' => 'Menggunakan mesin laser yang canggih, modern dan cepat untuk hasil sambungan yang rapi dan kuat. Menjadikan proses fabrikasi jauh lebih cepat dan hasil akhir produk yang bermutu tinggi.',
         ],
         'metal_bending' => [
             'title' => 'Metal Bending',
@@ -40,7 +40,7 @@ return [
         ],
         'bevelling' => [
             'title' => 'Bevelling',
-            'description' => 'Mesin Ironworker yang kuat dan mampu mencetak berbagai produk dan komponen custom metal sesuai dengan bentuk dan cetakan yang diinginkan dengan cepat dan presisi.',
+            'description' => 'Menggunakan mesin bevelling handal, kami mampu membentuk berbagai jenis profil bevel termasuk tipe K, Y, V, dan X dengan presisi tinggi, dirancang untuk memenuhi spesifikasi desain yang sempurna untuk setiap proyek.',
         ],
         'powder_coating' => [
             'title' => 'Powder Coating',

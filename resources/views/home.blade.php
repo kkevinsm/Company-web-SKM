@@ -201,7 +201,13 @@
                                          x-transition:leave-start="opacity-100" 
                                          x-transition:leave-end="opacity-0" 
                                          class="absolute inset-0">
-                                        <img :src="service.image" :alt="service.title" class="w-full h-full object-cover object-center shadow-lg" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/720x620/cccccc/ffffff?text=Image+Not+Found';">
+                                        <img 
+                                            :src="service.image" 
+                                            :alt="service.title" 
+                                            class="w-full h-full object-cover object-center shadow-lg sm:object-top" 
+                                            loading="lazy" 
+                                            decoding="async" 
+                                            onerror="this.onerror=null;this.src='https://placehold.co/720x620/cccccc/ffffff?text=Image+Not+Found';">
                                     </div>
                                 </template>
                             </div>
@@ -228,7 +234,10 @@
                                                 <h3 class="text-2xl font-bold group-hover:text-white" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.title"></h3>
                                                 <div class="flex-none w-10 h-1 rounded group-hover:bg-white" :class="{'bg-white': selectedIndex === services.indexOf(service), 'bg-[#f96628]': selectedIndex !== services.indexOf(service)}"></div>
                                                 <p class="text-sm group-hover:text-white flex-grow" :class="{'text-white': selectedIndex === services.indexOf(service)}" x-text="service.description"></p>
-                                                </div>
+                                                <template x-if="service.title === 'Bevelling'">
+                                                    <img src="{{ asset('images/works/bevel-icon.svg') }}" alt="Bevel Icon" class="mx-auto mt-4 w-64 h-64" loading="lazy" decoding="async">
+                                                </template>
+                                            </div>
                                             </div>
                                         </div>
                                     </template>
