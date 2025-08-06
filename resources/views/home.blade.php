@@ -187,8 +187,8 @@
                         <h2 class="text-4xl sm:text-5xl font-bold text-black py-16 text-center lg:text-left px-4">{{ __('home.what_we_do_title') }}</h2>
                     </div>
                 </div>
-                <div class="bg-youngorange pt-24>
-                     <div class="container mx-auto">
+                <div class="bg-youngorange pt-0 pb-0 px-0 mx-auto">
+
                         <div class="relative flex flex-col md:grid md:grid-cols-2 gap-6 items-center">
                             <!-- Image Section -->
                             <div class="relative w-full aspect-[4/3] md:h-[600px] overflow-hidden order-1">
@@ -214,7 +214,7 @@
 
                             <!-- Cards Section -->
                             <div class="w-full md:w-auto px-0 md:absolute md:left-[30%] lg:left-[40%] md:right-0 md:top-1/2 md:-translate-y-1/2 z-10 order-2 -mt-56 md:-mt-0 py-10 md:py-0">
-                                <div class="flex overflow-hidden gap-10 py-4 pl-[calc(50%-170px)] md:pl-0">
+                                <div class="flex overflow-hidden gap-8 py-4 pl-[calc(50%-170px)] md:pl-0">
                                     <template x-for="(service, index) in orderedServices" :key="service.title">
                                         <div class="flex-shrink-0 w-[340px]" 
                                              x-show="index < 3" 
@@ -255,7 +255,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+
                 </div>
             </div>
         </section>
