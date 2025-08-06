@@ -370,7 +370,11 @@
                             <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
                             <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
                             <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white">
-                                <iframe src="https://www.instagram.com/reel/DK-8bYBzG2q/embed" class="w-full h-full" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                                <!-- Elfsight TikTok Feed | Untitled TikTok Feed -->
+                        <div class="w-[375px] h-[812px] origin-top-left transform scale-[0.6]">
+                            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                            <div class="elfsight-app-2436d5e4-4136-4a78-bdc2-f401de3294df" data-elfsight-app-lazy></div>
+                        </div>
                             </div>
                         </div>
                     </div>
