@@ -40,7 +40,7 @@ return [
         ],
         'bevelling' => [
             'title' => 'Bevelling',
-            'description' => ' Utilizing a powerful, dedicated bevelling machine, we can precisely form a wide range of bevel profiles including K-bevels, Y-bevels, V-bevels, and X-bevels with high accuracy. This service is designed to meet the exact design specifications required for each project, ensuring a perfect fit and finish.',
+            'description' => ' Utilizing a powerful, dedicated bevelling machine, we can precisely form a wide range of bevel profiles including K, Y, V, and X-bevels with high accuracy. Designed to meet the exact specifications required for each project, ensuring a perfect fit and finish.',
         ],
         'powder_coating' => [
             'title' => 'Powder Coating',
