@@ -20,7 +20,7 @@
                 © Copyright PT Safari Karya Maju 2025. All Right Reserved.
             </p>
             <div class="flex items-center gap-4">
-                <a href="https://www.facebook.com/safarikaryamaju" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/skmlasercuttingandfabrication" target="_blank" rel="noopener noreferrer">
                     <img class="w-6 h-6" src="{{ asset('images/icon-fb.png') }}" alt="Facebook">
                 </a>
                 <a href="https://www.linkedin.com/company/safarikaryamaju/" target="_blank" rel="noopener noreferrer">
