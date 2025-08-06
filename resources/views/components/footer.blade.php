@@ -61,7 +61,7 @@
   "sameAs": [
     "https://www.youtube.com//@safarikaryamaju",
     "https://www.instagram.com/skm_lasercutting/",
-    "https://www.facebook.com/safarikaryamaju",
+    "https://www.facebook.com/skmlasercuttingandfabrication",
     "https://www.linkedin.com/company/safarikaryamaju/"
   ]
 }
