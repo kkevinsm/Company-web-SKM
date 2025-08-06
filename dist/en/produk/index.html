@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="OOtgyd8XQQFK3ZUte2lygVXtQT4JxKQmlYsBaNjK">
+        <meta name="description" content="Jelajahi berbagai produk fabrikasi metal unggulan kami. Dari laser cutting presisi hingga bending dan assembly, kami menyediakan solusi berkualitas tinggi untuk industri Anda.">
+        <title>Produk Kami - PT Safari Karya Maju</title>
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet" />
+        <link rel="dns-prefetch" href="http://googleusercontent.com/youtube.com/">
+        <link rel="dns-prefetch" href="http://googleusercontent.com/maps.google.com/">  
+        
+        <link rel="prefetch" href="http://localhost/en" as="document">
+        <link rel="prefetch" href="http://localhost/en/produk" as="document">
+        <link rel="prefetch" href="http://localhost/en/pelanggan" as="document">
+        <link rel="prefetch" href="http://localhost/en/sertifikasi" as="document">
+        <link rel="prefetch" href="http://localhost/en/hubungi-kami" as="document">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" /><script type="module" src="http://[::1]:5173/resources/js/app.js"></script>    </head>
+    <body class="font-sans antialiased">
+        
+        <nav x-data="{ open: false }" class="text-white absolute top-0 w-full z-50">
+    <div class="container mx-auto px-6">
+        <div class="flex items-center justify-between h-32">
+                        <a href="http://localhost/en" class="flex items-center gap-2">
+                <img class="w-12 h-12" src="http://localhost/images/LOGO SKM ONLY WHITE (1) 1.png" alt="Safari Karya Maju Logo" />
+                <span class="text-xl font-bold tracking-wider">SAFARI KARYA MAJU</span>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-12">
+                <a href="http://localhost/en" class="font-medium hover:text-blue-300 transition-colors">Home</a>
+                <a href="http://localhost/en/produk" class="font-medium hover:text-blue-300 transition-colors">Our Products</a>
+                <a href="http://localhost/en/pelanggan" class="font-medium hover:text-blue-300 transition-colors">Clients</a>
+                <a href="http://localhost/en/sertifikasi" class="font-medium hover:text-blue-300 transition-colors">Certification</a>
+                <a href="http://localhost/en/hubungi-kami" class="font-medium hover:text-blue-300 transition-colors">Contact Us</a>
+                
+                <!--  LANG DROPDOWN -->
+                <div x-data="{ open: false }" class="relative">
+                    <button @click="open = !open" class="font-medium hover:text-blue-300 transition-colors uppercase flex items-center gap-1">
+                        <span>en</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div x-show="open" @click.away="open = false" x-transition class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg py-1 z-50 text-black" style="display: none;">
+                        <a href="http://localhost/produk" class="flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100">
+                            <img src="http://localhost/images/icon_id.png" alt="ID Flag" class="w-5 h-auto">
+                            <span>ID</span>
+                        </a>
+                        <a href="http://localhost/en/produk" class="flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100">
+                            <img src="http://localhost/images/icon_en.png" alt="EN Flag" class="w-5 h-auto">
+                            <span>EN</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:hidden">
+                <button @click="open = !open" :aria-pressed="open" class="group inline-flex w-12 h-12 text-white items-center transition">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-6 h-6 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-x-0 group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[315deg]" y="7" width="9" height="2" rx="1"></rect>
+                        <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-[[aria-pressed=true]]:rotate-45" y="7" width="16" height="2" rx="1"></rect>
+                        <rect class="origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[135deg]" y="7" width="9" height="2" rx="1"></rect>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div x-show="open" x-transition class="md:hidden absolute top-24 right-6 w-auto bg-white bg-opacity-95 shadow-lg rounded-lg" @click.away="open = false" style="display: none;">
+        <div class="px-4 py-2">
+            <a href="http://localhost/en" class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Home</a>
+            <a href="http://localhost/en/produk" class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded whitespace-nowrap">Our Products</a>
+            <a href="http://localhost/en/pelanggan" class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Clients</a>
+            <a href="http://localhost/en/sertifikasi" class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">Certification</a>
+            <a href="http://localhost/en/hubungi-kami" class="block py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded whitespace-nowrap">Contact Us</a>
+            <hr class="my-1">
+            <a href="http://localhost/produk" class="flex items-center gap-2 py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">
+                <img src="http://localhost/images/icon_id.png" alt="ID Flag" class="w-5 h-auto">
+                <span>ID</span>
+            </a>
+            <a href="http://localhost/en/produk" class="flex items-center gap-2 py-2 px-2 text-left font-medium text-gray-800 hover:bg-gray-200 rounded">
+                <img src="http://localhost/images/icon_en.png" alt="EN Flag" class="w-5 h-auto">
+                <span>EN</span>
+            </a>
+        </div>
+    </div>
+</nav>
+        
+        <main class="relative">
+            
+        <!-- HERO SECTION -->
+        <section class="relative h-[720px] flex items-center justify-start overflow-hidden">
+            
+            <div class="absolute top-0 left-0 w-full h-full z-0">
+                <img 
+                    class="w-full h-full object-cover" 
+                    src="http://localhost/images/hero-image-produk.png" 
+                    alt="Latar Belakang Halaman Produk"
+                    >
+            </div>
+
+            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+
+            <div class="container mx-auto px-6">
+                <div class="relative z-20 text-white max-w-4xl">
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-normal">
+                        Certified Quality and Reliable Metal Sheeting You Can Trust
+                    </h1>
+                    <p class="mt-4 text-xl md:text-2xl leading-normal text-gray-200">
+                        Top-Rated Metal Sheeting Solutions for Every Industrial Application.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECTION 2 -->
+        <section class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 md:w-1/2">Our Products</h2>
+                    <p class="text-base text-gray-600 md:w-1/2 mt-4 md:mt-0 text-justify">
+                        We offer a comprehensive range of high-quality metal fabrication products tailored for various industrial applications. All our products are manufactured under official certification standards, ensuring safety, durability, and reliability in every use case.
+                    </p>
+                </div>
+
+                <div
+                    x-data="{
+                        slider: null,
+                        showModal: false,
+                        videoUrl: ''
+                    }"
+                    x-init="
+                        slider = tns({
+                            container: $refs.slider,
+                            items: 2,
+                            slideBy: 1,
+                            mouseDrag: true,
+                            loop: true,
+                            controls: false,
+                            nav: false,
+                            autoplay: false,
+                            autoplayButtonOutput: false,
+                            responsive: {
+                                768: { items: 3 },
+                                1024: { items: 6 }
+                            }
+                        });
+                    "
+                    class="relative"
+                >
+                    <div x-ref="slider">
+                        
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/1.png" alt="FIBER LASER" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/1.png" alt="FIBER LASER" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/2.png" alt="FIBER LASER" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/2.png" alt="FIBER LASER" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/3.png" alt="FIBER LASER" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/3.png" alt="FIBER LASER" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/4.png" alt="BENDING MACHINE" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/4.png" alt="BENDING MACHINE" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/5.png" alt="BRAKE MACHINE" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/5.png" alt="BRAKE MACHINE" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/6.png" alt="ROUTER MACHINE" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/6.png" alt="ROUTER MACHINE" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/7.png" alt="FIBER LASER" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/7.png" alt="FIBER LASER" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/8.png" alt="FIBER LASER" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/8.png" alt="FIBER LASER" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="px-3 flex-shrink-0 w-[calc((100%/6)-1.25rem)] snap-start py-4">
+                                <div
+                                    class="group relative w-full aspect-[3/4] [perspective:1000px] cursor-pointer"
+                                >
+                                    <div class="relative h-full w-full rounded-2xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                        <div class="absolute inset-0 [backface-visibility:hidden]">
+                                            <div class="relative h-full w-full rounded-2xl bg-gradient-to-t from-[#5c2c10] to-[#f96628] text-white p-4 flex flex-col justify-end text-center overflow-hidden">
+                                                <img src="http://localhost/images/products/9.png" alt="FIBER LASER" class="absolute top-0 left-0 w-full h-full object-contain z-0 opacity-100" loading="lazy" decoding="async">
+                                            </div>
+                                        </div>
+                                        <div class="absolute inset-0 h-full w-full rounded-2xl bg-gray-600 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                            <img class="h-full w-full rounded-2xl object-cover" src="http://localhost/images/products/9.png" alt="FIBER LASER" loading="lazy" decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+
+                    <div class="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2">
+                        <button @click="slider.goTo('prev')" class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center transition-opacity hover:opacity-75">
+                            <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                        </button>
+                        <button @click="slider.goTo('next')" class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center transition-opacity hover:opacity-75">
+                            <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                        </button>
+                    </div>
+
+                    <div x-show="showModal" x-transition class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" style="display: none;">
+                        <div class="relative bg-black p-2 rounded-lg shadow-lg w-full max-w-6xl" @click.away="showModal = false; videoUrl = ''">
+                            <button @click="showModal = false; videoUrl = ''" class="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full text-black flex items-center justify-center z-50">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </button>
+                            <div class="aspect-w-16 aspect-h-9">
+                                <video x-show="videoUrl" :src="videoUrl" controls autoplay class="w-full h-full">
+                                    Browser Anda tidak mendukung tag video.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+        </main>
+
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="fixed bottom-3 left-4 z-50 flex hover:scale-110 transition-transform">
+    <img src="http://localhost/images/whatsapp-icon.svg" alt="WhatsApp" class="w-14 h-14">
+</a>        <div class="w-full bg-youngorange">
+    <div class="container mx-auto px-6 md:px-20 py-12 relative" style="max-width: 1440px;">
+        <div class="flex flex-col items-center text-center gap-8 mb-12 md:mb-16">
+            <img class="w-64 md:w-80" src="http://localhost/images/skm-horizontal.png" alt="Logo SKM">
+            <div>
+                <p class="text-sm md:text-base">
+                    <span class="font-bold">Address:</span>
+                    Dsn. Bakalan RT 001 RW 002, Durensewu, Kec. Pandaan, Pasuruan, Jawa Timur 67156
+                </p>
+                <p class="text-sm md:text-base mt-2">
+                    <span class="font-bold">Email:</span>
+                    skm.manufacture@safarikaryamaju.com
+                </p>
+            </div>
+        </div>
+        <hr class="border-black">
+        
+        <div class="flex flex-col-reverse md:flex-row md:justify-between items-center gap-6 md:gap-0 mt-4">
+            <p class="text-zinc-500 text-sm md:text-base text-center md:text-left">
+                © Copyright PT Safari Karya Maju 2025. All Right Reserved.
+            </p>
+            <div class="flex items-center gap-4">
+                <a href="https://www.facebook.com/safarikaryamaju" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="http://localhost/images/icon-fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/safarikaryamaju/" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="http://localhost/images/icon-lin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/@safarikaryamaju" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="http://localhost/images/icon-yt.png" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/skm_lasercutting" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 h-6" src="http://localhost/images/icon-ig.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PT Safari Karya Maju",
+  "url": "http://localhost",
+  "logo": "http://localhost/images/skm-horizontal.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+62-343-633-704",
+    "email": "skm.manufacture@safarikaryamaju.com",
+    "contactType": "Customer Service"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dsn. Bakalan RT 001 RW 002, Durensewu, Kec. Pandaan",
+    "addressLocality": "Pasuruan",
+    "postalCode": "67156",
+    "addressRegion": "Jawa Timur",
+    "addressCountry": "ID"
+  },
+  "sameAs": [
+    "https://www.youtube.com//@safarikaryamaju",
+    "https://www.instagram.com/skm_lasercutting/",
+    "https://www.facebook.com/safarikaryamaju",
+    "https://www.linkedin.com/company/safarikaryamaju/"
+  ]
+}
+</script>
+
+    </body>
+</html>
