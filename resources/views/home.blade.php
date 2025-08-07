@@ -379,11 +379,10 @@
                             <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
                             <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
                             <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white">
-                                <div class="w-[375px] h-[812px] origin-top-left transform scale-[1.27]">
-                                    <!-- LightWidget WIDGET -->
+                                <!-- <div class="w-[375px] h-[812px] origin-top-left transform scale-[1.27]">
                                     <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
                                     <iframe src="//lightwidget.com/widgets/43c31b137dc75c1fa9ee4cc0c89f6c99.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
