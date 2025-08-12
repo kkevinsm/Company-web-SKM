@@ -17,7 +17,7 @@
         
         <div class="flex flex-col-reverse md:flex-row md:justify-between items-center gap-6 md:gap-0 mt-4">
             <p class="text-zinc-500 text-sm md:text-base text-center md:text-left">
-                © Copyright PT Safari Karya Maju 2025. All Right Reserved.
+                © Copyright PT Safari Karya Maju 2025. All Right Reserved. / <a href="{{ route(app()->getLocale() . '.tnc') }}" class="hover:underline">{{ __('terms.title') }}</a> / <a href="{{ route(app()->getLocale() . '.privacy') }}" class="hover:underline">{{__ ('privacy.title') }}</a>
             </p>
             <div class="flex items-center gap-4">
                 <a href="https://www.facebook.com/skmlasercuttingandfabrication" target="_blank" rel="noopener noreferrer">
