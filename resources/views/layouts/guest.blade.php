@@ -16,6 +16,9 @@
         <link rel="prefetch" href="{{ route(app()->getLocale() . '.pelanggan') }}" as="document">
         <link rel="prefetch" href="{{ route(app()->getLocale() . '.sertifikasi') }}" as="document">
         <link rel="prefetch" href="{{ route(app()->getLocale() . '.hubungi-kami') }}" as="document">
+
+        <link rel="prefetch" href="{{ route(app()->getLocale() . '.privacy') }}" as="document">
+        <link rel="prefetch" href="{{ route(app()->getLocale() . '.tnc') }}" as="document">
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
