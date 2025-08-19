@@ -4,9 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use App\Http\Controllers\HomeController;
-// controller untuk Admin
-use App\Http\Controllers\Admin\AdminLoginController;
-use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/generate-sitemap', function () {
@@ -60,32 +58,15 @@ Route::middleware('set.locale')->name('id.')->group(function () {
 
 // --- ROUTE UNTUK ADMIN DASHBOARD ---
 
-// Memberi prefix 'admin' pada URL (contoh: /admin/login)
-// Memberi nama 'admin.' pada route (contoh: route('admin.login'))
+// Admin routes
 Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [AdminController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AdminController::class, 'login']);
+    Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
-    // Route untuk tamu (yang belum login)
-    Route::middleware('guest')->group(function () {
-        Route::get('/login', [AdminLoginController::class, 'create'])->name('login');
-        Route::post('/login', [AdminLoginController::class, 'store']);
+    // Protected admin routes
+    Route::middleware([\App\Http\Middleware\AdminAuthentication::class])->group(function () {
+        Route::get('/upload', [AdminController::class, 'showUpload'])->name('upload');
+        Route::post('/videos', [AdminController::class, 'storeVideo'])->name('videos.store');
     });
-
-    // Route yang hanya bisa diakses setelah login (terproteksi)
-    Route::middleware('auth')->group(function () {
-        // Arahkan /admin ke dashboard upload
-        Route::get('/', [AdminDashboardController::class, 'upload']);
-        Route::get('/dashboard', [AdminDashboardController::class, 'upload'])->name('dashboard'); // alias untuk dashboard
-        Route::get('/upload', [AdminDashboardController::class, 'upload'])->name('upload');
-        
-        // Route untuk memproses upload video
-        Route::post('/upload-video', [AdminDashboardController::class, 'storeUpload'])->name('upload.store');
-
-        // Route untuk logout
-        Route::post('/logout', [AdminLoginController::class, 'destroy'])->name('logout');
-    });
-
-});
-
-Route::get('/cek-tampilan-dashboard', function () {
-    return view('admin.upload');
 });

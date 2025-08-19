@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -10,41 +10,49 @@ class TikTokService
 {
     public function getLatestVideo()
     {
-        // Gunakan cache untuk menyimpan video ID selama 1 jam (3600 detik)
-        // Ini mencegah scraping setiap kali halaman dimuat.
+        // Gunakan cache selama 1 jam untuk mengurangi frekuensi scraping
         return Cache::remember('latest_tiktok_video_id', 3600, function () {
             try {
-                $username = env('TIKTOK_USERNAME');
-                if (!$username) {
-                    Log::warning('TIKTOK_USERNAME environment variable is not set.');
-                    // Gunakan ID video yang valid sebagai fallback
-                    return '7534211093099547910';
+                $username = env('TIKTOK_USERNAME', 'safarikaryamaju');
+                
+                // Gunakan header User-Agent yang menyerupai browser asli
+                $response = Http::withHeaders([
+                    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'
+                ])->get("https://www.tiktok.com/@" . $username);
+
+                if ($response->failed()) {
+                    Log::error("TikTok Scraper: Gagal mengakses halaman @{$username}. Status: " . $response->status());
+                    return '7534211093099547910'; // Fallback
                 }
 
-                $response = Http::get("https://www.tiktok.com/@" . $username);
+                $html = $response->body();
                 
-                if ($response->successful()) {
-                    $html = $response->body();
+                // Cari data JSON yang disematkan di dalam tag <script>
+                preg_match('/<script id="SIGI_STATE" type="application\/json">(.*?)<\/script>/', $html, $matches);
+                
+                if (isset($matches[1])) {
+                    $jsonData = json_decode($matches[1], true);
                     
-                    // Regex yang lebih baik untuk mencari data JSON di dalam tag script
-                    preg_match('/<script id="SIGI_STATE" type="application\/json">(.*?)<\/script>/', $html, $matches);
-                    
-                    if (isset($matches[1])) {
-                        $jsonData = json_decode($matches[1], true);
-                        
-                        // Ambil video ID dari item pertama dalam daftar video
-                        $latestVideoId = data_get($jsonData, 'ItemModule.1.id');
-                        
-                        if ($latestVideoId) {
-                            return $latestVideoId;
+                    // Ambil daftar video dari 'ItemModule'
+                    $itemModule = $jsonData['ItemModule'] ?? [];
+
+                    if (!empty($itemModule)) {
+                        // Video terbaru adalah item pertama dalam daftar
+                        $latestVideo = reset($itemModule);
+                        if (isset($latestVideo['id'])) {
+                            Log::info("TikTok Scraper: Berhasil menemukan video terbaru ID: " . $latestVideo['id']);
+                            return $latestVideo['id'];
                         }
                     }
                 }
+
+                Log::warning("TikTok Scraper: Tidak dapat menemukan data video di halaman @{$username}.");
+
             } catch (\Exception $e) {
-                Log::error('Error fetching TikTok video: ' . $e->getMessage());
+                Log::error('TikTok Scraper Error: ' . $e->getMessage());
             }
             
-            // Fallback ke video ID yang Anda berikan jika terjadi error atau tidak ditemukan
+            // Jika semua cara gagal, kembalikan ID video fallback yang valid
             return '7534211093099547910';
         });
     }
