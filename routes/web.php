@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/generate-sitemap', function () {
@@ -53,4 +54,19 @@ Route::middleware('set.locale')->name('id.')->group(function () {
     Route::get('/tnc', function () { return view('tnc'); })->name('tnc');
     Route::get('/privacy', function () { return view('privacy'); })->name('privacy');
 
+});
+
+// --- ROUTE UNTUK ADMIN DASHBOARD ---
+
+// Admin routes
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [AdminController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AdminController::class, 'login']);
+    Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+
+    // Protected admin routes
+    Route::middleware([\App\Http\Middleware\AdminAuthentication::class])->group(function () {
+        Route::get('/upload', [AdminController::class, 'showUpload'])->name('upload');
+        Route::post('/videos', [AdminController::class, 'storeVideo'])->name('videos.store');
+    });
 });
