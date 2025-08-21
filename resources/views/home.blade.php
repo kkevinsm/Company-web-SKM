@@ -474,7 +474,7 @@
                                     <a :href="reelsUrl" 
                                        target="_blank"
                                        class="w-full px-4 py-2 rounded-b-[2rem] bg-white/20 backdrop-blur-sm text-white text-center font-semibold hover:bg-white/30 transition-all duration-800">
-                                        Kunjungi reels!
+                                        Kunjungi tiktok!
                                     </a>
                                 </div>
                             </div>

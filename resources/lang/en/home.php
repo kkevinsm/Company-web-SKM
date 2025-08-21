@@ -54,7 +54,7 @@ return [
     'video_unsupported' => 'Your browser does not support the video tag.',
 
     // Reels Section
-    'reels_title' => 'Reels For You',
-    'reels_text' => 'Take a closer look at PT Safari Karya Maju. Through Instagram content, we share industry insights, behind-the-scenes footage, and our latest innovations dynamically. Follow us on social media to stay connected and get all our valuable updates.',
-    'our_instagram' => 'Our Instagram',
+    'reels_title' => 'Tiktok For You',
+    'reels_text' => 'Take a closer look at PT Safari Karya Maju. Through Tiktok content, we share industry insights, behind-the-scenes footage, and our latest innovations dynamically. Follow us on social media to stay connected and get all our valuable updates.',
+    'our_instagram' => 'Our Tiktok',
 ];
