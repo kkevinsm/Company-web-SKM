@@ -54,7 +54,7 @@ return [
     'video_unsupported' => 'Browser Anda tidak mendukung tag video.',
 
     // Reels Section
-    'reels_title' => 'Tiktok kami Untuk Anda',
-    'reels_text' => 'Lihat lebih dekat PT Safari Karya Maju. Melalui konten Tiktok, kami berbagi wawasan industri, cuplikan di balik layar, dan inovasi terbaru kami secara dinamis. Ikuti kami di tiktok untuk tetap terhubung dan mendapatkan semua update berharga dari kami.',
-    'our_instagram' => 'Tiktok Kami',
+    'reels_title' => 'Reels Untuk Anda',
+    'reels_text' => 'Lihat lebih dekat PT Safari Karya Maju. Melalui konten reels, kami berbagi wawasan industri, cuplikan di balik layar, dan inovasi terbaru kami secara dinamis. Ikuti kami di tiktok untuk tetap terhubung dan mendapatkan semua update berharga dari kami.',
+    'our_instagram' => 'Instagram Kami',
 ];
