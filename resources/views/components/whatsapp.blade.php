@@ -21,7 +21,7 @@
          style="display: none;">
         
         <!-- Background Shape -->
-        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden border">
+        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
             <!-- Close Button -->
             <button @click="showPopup = false" 
                     class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200 z-10">
