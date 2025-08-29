@@ -307,6 +307,8 @@
                                 ['title' => 'HYDRAULIC IRONWORKER', 'subtitle' => 'KRRASS', 'image' => '7.png', 'video_file' => 'video7.mp4'],
                                 ['title' => 'LASER WELDING', 'subtitle' => 'BODOR 1500 PRO', 'image' => '8.png', 'video_file' => 'video8.mp4'],
                                 ['title' => 'POWDER COATING', 'subtitle' => 'POWDER COATING', 'image' => '9.png', 'video_file' => 'video9.mp4'],
+                                ['title' => 'LASER PIPA', 'subtitle' => 'LASER PIPA', 'image' => '10.png', 'video_file' => 'video10.mp4'],
+
                             ];
                         @endphp
 

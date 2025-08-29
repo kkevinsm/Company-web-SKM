@@ -45,7 +45,7 @@
                             </div>
                             <div class="flex items-center gap-3">
                                 <img src="{{ asset('images/phone.svg') }}" alt="Telepon" class="w-6 h-6" loading="lazy" decoding="async">
-                                <span>(0343) 633 704</span>
+                                <span>(0343) </span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <img src="{{ asset('images/fax.svg') }}" alt="Fax" class="w-6 h-6" loading="lazy" decoding="async">
