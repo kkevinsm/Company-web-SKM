@@ -17,8 +17,8 @@ Route::get('/generate-sitemap', function () {
     $sitemap->add(Url::create('/en/tentang')->addAlternate('/tentang', 'id'));
     $sitemap->add(Url::create('/en/hubungi-kami')->addAlternate('/hubungi-kami', 'id'));
     $sitemap->add(Url::create('/en/welcome')->addAlternate('/welcome', 'id'));
-    $sitemap->add(Url::create('/en/tnc')->addAlternate('/tnc', 'id'));
-    $sitemap->add(Url::create('/en/privacy')->addAlternate('/privacy', 'id'));
+    $sitemap->add(Url::create('/en/syarat-dan-ketentuan')->addAlternate('/syarat-dan-ketentuan', 'id'));
+    $sitemap->add(Url::create('/en/kebijakan-privasi')->addAlternate('/kebijakan-privasi', 'id'));
 
     $sitemap->writeToFile(public_path('sitemap.xml'));
 
@@ -36,8 +36,8 @@ Route::prefix('en')->middleware('set.locale')->name('en.')->group(function () {
     Route::get('/tentang', function () { return view('home.tentang'); })->name('tentang');
     Route::get('/hubungi-kami', function () { return view('hubungi-kami'); })->name('hubungi-kami');
     Route::get('/welcome', function () { return view('home.welcome'); })->name('welcome');
-    Route::get('/tnc', function () { return view('tnc'); })->name('tnc');
-    Route::get('/privacy', function () { return view('privacy'); })->name('privacy');
+    Route::get('/syarat-dan-ketentuan', function () { return view('syarat-dan-ketentuan'); })->name('syarat-dan-ketentuan');
+    Route::get('/kebijakan-privasi', function () { return view('kebijakan-privasi'); })->name('kebijakan-privasi');
 
 });
 
@@ -51,8 +51,8 @@ Route::middleware('set.locale')->name('id.')->group(function () {
     Route::get('/tentang', function () { return view('home.tentang'); })->name('tentang');
     Route::get('/hubungi-kami', function () { return view('hubungi-kami'); })->name('hubungi-kami');
     Route::get('/welcome', function () { return view('home.welcome'); })->name('welcome');
-    Route::get('/tnc', function () { return view('tnc'); })->name('tnc');
-    Route::get('/privacy', function () { return view('privacy'); })->name('privacy');
+    Route::get('/syarat-dan-ketentuan', function () { return view('syarat-dan-ketentuan'); })->name('syarat-dan-ketentuan');
+    Route::get('/kebijakan-privasi', function () { return view('kebijakan-privasi'); })->name('kebijakan-privasi');
 
 });
 
