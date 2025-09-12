@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="description" content="@yield('description', 'PT Safari Karya Maju adalah perusahaan terkemuka di bidang fabrikasi metal dan laser cutting di Indonesia, menyediakan solusi presisi dengan teknologi modern.')">
         <title>@yield('title', 'PT Safari Karya Maju')</title>
+        <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet" />
         <link rel="dns-prefetch" href="http://googleusercontent.com/youtube.com/">
