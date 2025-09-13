@@ -334,10 +334,10 @@
                     </div>
 
                     <div class="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2">
-                        <button @click="slider.goTo('prev')" class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center transition-opacity hover:opacity-75">
+                        <button @click="slider.goTo('prev')" aria-label="Previous slide" class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center transition-opacity hover:opacity-75">
                             <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
                         </button>
-                        <button @click="slider.goTo('next')" class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center transition-opacity hover:opacity-75">
+                        <button @click="slider.goTo('next')" aria-label="Next slide" class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center transition-opacity hover:opacity-75">
                             <svg class="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
                         </button>
                     </div>
