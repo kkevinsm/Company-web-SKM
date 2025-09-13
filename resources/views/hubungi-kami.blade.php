@@ -70,7 +70,7 @@
                 <p class="text-lg text-white/80 leading-relaxed">
                     {{ __('hubungi.section_subtitle') }}
                 </p>
-                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-white rounded-full text-white text-base font-bold hover:bg-white hover:text-black hover:px-12 transition-all duration-300">
+                <a href="https://wa.me/6285791279117?text=Halo,%20saya%20ingin%20konsultasi%20produk"  target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-12 py-3 px-8 border-2 border-white rounded-full text-white text-base font-bold hover:bg-white hover:text-black hover:px-12 transition-all duration-300">
                     <span>{{ __('hubungi.contact_us') }}</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </a>
