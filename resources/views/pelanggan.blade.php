@@ -64,6 +64,8 @@
                     ['name' => 'PT. INKA Multi Solusi', 'logo' => 'logo-inka.png'],
                     ['name' => 'PT. Cakra Abadi Tekhindo', 'logo' => 'logo-cakra.png'],
                     ['name' => 'PT. Srimurni Surabaya', 'logo' => 'logo-srimurni.png'],
+                    ['name' => 'PT. Indonesia Kereta Api', 'logo' => 'logo-inka2.png'],
+                    ['name' => 'PT. Industrial Robotic Automation', 'logo' => 'logo-ira.png'],
                 ];
             @endphp
 
